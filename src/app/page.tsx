@@ -1,13 +1,13 @@
 // import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className='font-[family-name:var(--font-general-sans-regular)] p-4'>
-      <header className='h-[8dvh] flex items-center'>
+      <header className='max-h-[10dvh] flex items-center'>
         <nav className='w-full flex space-between'>
           <Link
             href={"/"}
@@ -16,18 +16,21 @@ export default function Home() {
             byop.
           </Link>
 
-          <Button variant='ghost' className='ml-auto'>
+          <Button
+            variant='ghost'
+            className='ml-auto active:scale-95 transition-all ease-in-out duration-500'
+          >
             {true ? <SunIcon /> : <MoonIcon />}
           </Button>
         </nav>
       </header>
 
-      <main className='min-h-[85dvh] grid place-items-center'>
-        <section className='flex flex-col items-center justify-center gap-4 text-center'>
+      <main className='grid place-items-center gap-16'>
+        <section className='min-h-[95dvh]  flex flex-col items-center justify-center gap-4 text-center'>
           <h1 className='text-3xl font-[family-name:var(--font-general-sans-bold)]'>
-            Build a modern, responsive portfolio website{" "}
+            Build a modern, responsive{" "}
             <span className='bg-gradient-linear-100 bg-clip-text text-transparent'>
-              in minutes
+              portfolio website in minutes!
             </span>
           </h1>
           <p className='p-2 text-sm font-[family-name:var(--font-general-sans-regular)] text-gray-300'>
@@ -35,110 +38,74 @@ export default function Home() {
             simplicity and ease in just a few clicks.
           </p>
 
-          <Button
-            variant='default'
-            className='px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)]'
+          <Link
+            href='/'
+            className={`${buttonVariants({
+              variant: "outline",
+            })} px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] active:scale-95 transition-all ease-in-out duration-500`}
           >
             Get Started
-          </Button>
+          </Link>
+        </section>
+
+        <section>
+          <div className='text-center'>
+            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
+              features
+            </h2>
+            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
+              Why use byop?
+            </p>
+          </div>
+
+          <div></div>
+        </section>
+
+        <section>
+          <div className='text-center'>
+            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
+              process
+            </h2>
+            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
+              how to byop?
+            </p>
+          </div>
+
+          <div></div>
+        </section>
+
+        <section>
+          <div className='text-center'>
+            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
+              ready to byop?
+            </h2>
+            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
+              Build your own stunning, responsive Portfolio with ease today!
+            </p>
+          </div>
+
+          <div></div>
         </section>
       </main>
-    </div>
-    // <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-general-sans-regular)]'>
-    //   <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-    //     <Image
-    //       className='dark:invert'
-    //       src='https://nextjs.org/icons/next.svg'
-    //       alt='Next.js logo'
-    //       width={180}
-    //       height={38}
-    //       priority
-    //     />
-    //     <ol className='list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]'>
-    //       <li className='mb-2'>
-    //         Get started by editing{" "}
-    //         <code className='bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold'>
-    //           src/app/page.tsx
-    //         </code>
-    //         .
-    //       </li>
-    //       <li>Save and see your changes instantly.</li>
-    //     </ol>
 
-    //     <div className='flex gap-4 items-center flex-col sm:flex-row'>
-    //       <a
-    //         className='rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5'
-    //         href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //         target='_blank'
-    //         rel='noopener noreferrer'
-    //       >
-    //         <Image
-    //           className='dark:invert'
-    //           src='https://nextjs.org/icons/vercel.svg'
-    //           alt='Vercel logomark'
-    //           width={20}
-    //           height={20}
-    //         />
-    //         Deploy now
-    //       </a>
-    //       <a
-    //         className='rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44'
-    //         href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //         target='_blank'
-    //         rel='noopener noreferrer'
-    //       >
-    //         Read our docs
-    //       </a>
-    //     </div>
-    //   </main>
-    //   <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'>
-    //     <a
-    //       className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-    //       href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //       target='_blank'
-    //       rel='noopener noreferrer'
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src='https://nextjs.org/icons/file.svg'
-    //         alt='File icon'
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Learn
-    //     </a>
-    //     <a
-    //       className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-    //       href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //       target='_blank'
-    //       rel='noopener noreferrer'
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src='https://nextjs.org/icons/window.svg'
-    //         alt='Window icon'
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Examples
-    //     </a>
-    //     <a
-    //       className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-    //       href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-    //       target='_blank'
-    //       rel='noopener noreferrer'
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src='https://nextjs.org/icons/globe.svg'
-    //         alt='Globe icon'
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Go to nextjs.org →
-    //     </a>
-    //   </footer>
-    // </div>
+      <footer className='mt-12'>
+        <p className='text-sm font-[family-name:var(--font-general-sans-regular)] text-center text-gray-300'>
+          © 2024{" "}
+          <span className='bg-gradient-linear-100 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-bold)]'>
+            byop.
+          </span>{" "}
+          by{" "}
+          <Link
+            href={"https://danielezekiel.vercel.app"}
+            target='_blank'
+            className='bg-gradient-linear-300 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-semibold)] border-b-2 border-b-gray-300 border-b-gray-500'
+          >
+            Daniel Ezekiel
+          </Link>
+          . All rights reserved.
+        </p>
+      </footer>
+    </div>
   );
 }
 
