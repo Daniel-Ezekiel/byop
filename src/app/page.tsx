@@ -80,7 +80,7 @@ export default function Home() {
               >
                 <ZapIcon className='text-sky-600' />
               </Button>
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg'>
                 Lightweight and Fast
               </h4>
               <p>
@@ -96,7 +96,7 @@ export default function Home() {
               >
                 <MonitorSmartphoneIcon className='text-sky-600' />
               </Button>
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg'>
                 Modern and Responsive
               </h4>
               <p>
@@ -112,7 +112,7 @@ export default function Home() {
               >
                 <RocketIcon className='text-sky-600' />
               </Button>
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg'>
                 Quick and Easy Setup
               </h4>
               <p>
@@ -128,7 +128,7 @@ export default function Home() {
               >
                 <TrendingUpIcon className='text-sky-600' />
               </Button>
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg'>
                 Excellent Lighthouse Performance
               </h4>
               <p>
@@ -144,7 +144,7 @@ export default function Home() {
               >
                 <HandshakeIcon className='text-sky-600' />
               </Button>
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg'>
                 SEO Friendly
               </h4>
               <p>
@@ -160,7 +160,7 @@ export default function Home() {
               >
                 <KeyRoundIcon className='text-sky-600' />
               </Button>
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg'>
                 Privacy and Security
               </h4>
               <p>
@@ -171,7 +171,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='flex flex-col gap-8'>
+        <section className='flex flex-col gap-16'>
           <div className='text-center'>
             <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
               process
@@ -226,7 +226,7 @@ export default function Home() {
               >
                 <LogInIcon className='text-sky-600' />
               </Button>
-              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
                 Sign In
               </h4>
               <p>
@@ -252,7 +252,7 @@ export default function Home() {
               >
                 <UploadIcon className='text-sky-600' />
               </Button>
-              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
                 Add your portfolio info
               </h4>
               <p>
@@ -279,7 +279,7 @@ export default function Home() {
               >
                 <Share2Icon className='text-sky-600' />
               </Button>
-              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
                 Generate and Share
               </h4>
               <p>
@@ -296,7 +296,7 @@ export default function Home() {
         </section>
 
         <section>
-          <div className='text-center flex flex-col justify-center items-center gap-4'>
+          <div className='text-center flex flex-col justify-center items-center gap-4 py-28'>
             <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
               ready to byop?
             </h2>
