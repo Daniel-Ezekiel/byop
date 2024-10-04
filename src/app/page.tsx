@@ -1,7 +1,15 @@
 // import Image from "next/image";
 
 import { Button, buttonVariants } from "@/components/ui/button";
-import { MoonIcon, SunIcon } from "lucide-react";
+import {
+  HandshakeIcon,
+  KeyRoundIcon,
+  MonitorSmartphoneIcon,
+  MoonIcon,
+  SunIcon,
+  TrendingUpIcon,
+  ZapIcon,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -48,7 +56,7 @@ export default function Home() {
           </Link>
         </section>
 
-        <section>
+        <section className='flex flex-col gap-8'>
           <div className='text-center'>
             <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
               features
@@ -57,11 +65,76 @@ export default function Home() {
               Why use byop?
             </p>
           </div>
+          <div className='grid gap-8'>
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <ZapIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Lightweight and Fast
+              </h4>
+              <p>
+                Built for speed—load times are kept minimal, ensuring a seamless
+                user experience.
+              </p>
+            </div>
 
-          <div></div>
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <MonitorSmartphoneIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Modern and Responsive
+              </h4>
+              <p>
+                Designed with a modern, mobile-first approach, ensuring your
+                portfolio looks great on any device.
+              </p>
+            </div>
+
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <span>EZ</span>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Quick and Easy Setup
+              </h4>
+              <p>
+                Create your portfolio in just a few clicks. No technical
+                expertise required.
+              </p>
+            </div>
+
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <TrendingUpIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Excellent Lighthouse Performance
+              </h4>
+              <p>
+                Optimized for web performance, achieving high scores in Google
+                Lighthouse audits for speed, accessibility, and more.
+              </p>
+            </div>
+
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <HandshakeIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                SEO Friendly
+              </h4>
+              <p>
+                Boost your online presence with SEO-optimized portfolio pages,
+                helping you rank better in search engines with the right setup.
+              </p>
+            </div>
+
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <KeyRoundIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Privacy and Security
+              </h4>
+              <p>
+                Your data is stored securely, and you maintain full control over
+                what is shared and displayed.
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section>
+        <section className='flex flex-col gap-8'>
           <div className='text-center'>
             <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
               process
@@ -71,7 +144,40 @@ export default function Home() {
             </p>
           </div>
 
-          <div></div>
+          <div className='grid gap-8'>
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <ZapIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Lightweight and Fast
+              </h4>
+              <p>
+                Built for speed—load times are kept minimal, ensuring a seamless
+                user experience.
+              </p>
+            </div>
+
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <MonitorSmartphoneIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Modern and Responsive
+              </h4>
+              <p>
+                Designed with a modern, mobile-first approach, ensuring your
+                portfolio looks great on any device.
+              </p>
+            </div>
+
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <span>EZ</span>
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
+                Quick and Easy Setup
+              </h4>
+              <p>
+                Create your portfolio in just a few clicks. No technical
+                expertise required.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section>
