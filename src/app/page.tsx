@@ -9,6 +9,7 @@ import {
   LogInIcon,
   MonitorSmartphoneIcon,
   MoonIcon,
+  RocketIcon,
   Share2Icon,
   SunIcon,
   TrendingUpIcon,
@@ -72,8 +73,13 @@ export default function Home() {
             </p>
           </div>
           <div className='grid gap-8'>
-            <div className='p-6 py-8 flex flex-col gap-2'>
-              <ZapIcon />
+            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <ZapIcon className='text-sky-600' />
+              </Button>
               <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
                 Lightweight and Fast
               </h4>
@@ -84,7 +90,12 @@ export default function Home() {
             </div>
 
             <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <MonitorSmartphoneIcon />
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <MonitorSmartphoneIcon className='text-sky-600' />
+              </Button>
               <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
                 Modern and Responsive
               </h4>
@@ -95,7 +106,12 @@ export default function Home() {
             </div>
 
             <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <span>EZ</span>
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <RocketIcon className='text-sky-600' />
+              </Button>
               <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
                 Quick and Easy Setup
               </h4>
@@ -106,7 +122,12 @@ export default function Home() {
             </div>
 
             <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <TrendingUpIcon />
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <TrendingUpIcon className='text-sky-600' />
+              </Button>
               <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
                 Excellent Lighthouse Performance
               </h4>
@@ -117,7 +138,12 @@ export default function Home() {
             </div>
 
             <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <HandshakeIcon />
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <HandshakeIcon className='text-sky-600' />
+              </Button>
               <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
                 SEO Friendly
               </h4>
@@ -128,7 +154,12 @@ export default function Home() {
             </div>
 
             <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <KeyRoundIcon />
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <KeyRoundIcon className='text-sky-600' />
+              </Button>
               <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
                 Privacy and Security
               </h4>
@@ -189,7 +220,12 @@ export default function Home() {
                 currProcessNum !== 1 ? "hidden" : "flex"
               } p-6 py-8 flex-col gap-2`}
             >
-              <LogInIcon />
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <LogInIcon className='text-sky-600' />
+              </Button>
               <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
                 Sign In
               </h4>
@@ -210,7 +246,12 @@ export default function Home() {
                 currProcessNum !== 2 ? "hidden" : "flex"
               } p-6 py-8 flex-col gap-2`}
             >
-              <UploadIcon />
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <UploadIcon className='text-sky-600' />
+              </Button>
               <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
                 Add your portfolio info
               </h4>
@@ -232,7 +273,12 @@ export default function Home() {
                 currProcessNum !== 3 ? "hidden" : "flex"
               } p-6 py-8 flex-col gap-2`}
             >
-              <Share2Icon />
+              <Button
+                variant={"ghost"}
+                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+              >
+                <Share2Icon className='text-sky-600' />
+              </Button>
               <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
                 Generate and Share
               </h4>
@@ -250,20 +296,26 @@ export default function Home() {
         </section>
 
         <section>
-          <div className='text-center'>
+          <div className='text-center flex flex-col justify-center items-center gap-4'>
             <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
               ready to byop?
             </h2>
             <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
               Build your own stunning, responsive Portfolio with ease today!
             </p>
+            <Link
+              href='/'
+              className={`${buttonVariants({
+                variant: "outline",
+              })} px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] active:scale-95 transition-all ease-in-out duration-500`}
+            >
+              Get Started
+            </Link>
           </div>
-
-          <div></div>
         </section>
       </main>
 
-      <footer className='mt-12'>
+      <footer className='mt-12 border-t pt-4'>
         <p className='text-sm font-[family-name:var(--font-general-sans-regular)] text-center text-gray-300'>
           © 2024{" "}
           <span className='bg-gradient-linear-100 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-bold)]'>
@@ -273,7 +325,7 @@ export default function Home() {
           <Link
             href={"https://danielezekiel.vercel.app"}
             target='_blank'
-            className='bg-gradient-linear-300 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-semibold)] border-b-2 border-b-gray-300 border-b-gray-500'
+            className='bg-gradient-linear-300 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-semibold)] border-b-2 border-b-gray-500'
           >
             Daniel Ezekiel
           </Link>
