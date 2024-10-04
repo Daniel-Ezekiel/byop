@@ -1,18 +1,24 @@
 // import Image from "next/image";
-
+"use client";
+import Link from "next/link";
+import { useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   HandshakeIcon,
   KeyRoundIcon,
+  LogInIcon,
   MonitorSmartphoneIcon,
   MoonIcon,
+  Share2Icon,
   SunIcon,
   TrendingUpIcon,
+  UploadIcon,
   ZapIcon,
 } from "lucide-react";
-import Link from "next/link";
 
 export default function Home() {
+  const [currProcessNum, setCurrentProcessNum] = useState<number>(1);
+
   return (
     <div className='font-[family-name:var(--font-general-sans-regular)] p-4'>
       <header className='max-h-[10dvh] flex items-center'>
@@ -140,41 +146,104 @@ export default function Home() {
               process
             </h2>
             <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
-              how to byop?
+              how to byop in 3 simple steps?
             </p>
           </div>
 
           <div className='grid gap-8'>
-            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <ZapIcon />
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
-                Lightweight and Fast
+            <div className='flex justify-center items-center gap-2'>
+              <Button
+                className={`${
+                  currProcessNum !== 1
+                    ? "bg-white"
+                    : "bg-gradient-linear-300 text-white -translate-y-2 transition-transform ease-in-out duration-500"
+                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
+                onClick={() => setCurrentProcessNum(1)}
+              >
+                <span>01.</span> Initialize
+              </Button>
+              <Button
+                className={`${
+                  currProcessNum !== 2
+                    ? "bg-white"
+                    : "bg-gradient-linear-300 text-white -translate-y-2 transition-transform ease-in-out duration-500"
+                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
+                onClick={() => setCurrentProcessNum(2)}
+              >
+                <span>02.</span> Upload
+              </Button>
+              <Button
+                className={`${
+                  currProcessNum !== 3
+                    ? "bg-white"
+                    : "bg-gradient-linear-300 text-white -translate-y-2 transition-transform ease-in-out duration-500"
+                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
+                onClick={() => setCurrentProcessNum(3)}
+              >
+                <span>03.</span> Publish
+              </Button>
+            </div>
+
+            <div
+              className={`${
+                currProcessNum !== 1 ? "hidden" : "flex"
+              } p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md`}
+            >
+              <LogInIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+                Sign In
               </h4>
               <p>
-                Built for speed—load times are kept minimal, ensuring a seamless
-                user experience.
+                The first step is quick and secure. Sign in with your preferred
+                method using OAuth, allowing you to authenticate through popular
+                platforms like Google or GitHub. This ensures a seamless and
+                secure login process without the need to create a new account or
+                remember another password. Your identity is verified instantly,
+                and you can get started without delay. Plus, you have full
+                control over the data shared during authentication, ensuring
+                privacy.
               </p>
             </div>
 
-            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <MonitorSmartphoneIcon />
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
-                Modern and Responsive
+            <div
+              className={`${
+                currProcessNum !== 2 ? "hidden" : "flex"
+              } p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md`}
+            >
+              <UploadIcon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+                Add your portfolio info
               </h4>
               <p>
-                Designed with a modern, mobile-first approach, ensuring your
-                portfolio looks great on any device.
+                Once signed in, it's time to customize your portfolio! You can
+                easily add your personal information, such as your name, contact
+                details, and a short bio. You'll also have fields to input your
+                professional skills, past projects, and relevant experience.
+                There's even space to include links to your social media
+                profiles, GitHub repositories, or personal blogs. Our
+                user-friendly interface allows you to edit and preview your
+                content as you go, ensuring everything looks perfect before you
+                proceed.
               </p>
             </div>
 
-            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
-              <span>EZ</span>
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
-                Quick and Easy Setup
+            <div
+              className={`${
+                currProcessNum !== 3 ? "hidden" : "flex"
+              } p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md`}
+            >
+              <Share2Icon />
+              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+                Generate and Share
               </h4>
               <p>
-                Create your portfolio in just a few clicks. No technical
-                expertise required.
+                With your details uploaded, you're just one click away from
+                creating your portfolio. The app instantly compiles your
+                information into a sleek, modern, and fully responsive one-page
+                website. Once generated, you'll receive a unique URL that you
+                can share with potential employers, clients, or colleagues. The
+                portfolio is optimized for mobile and desktop, and you can
+                update it anytime by signing back in!
               </p>
             </div>
           </div>
