@@ -72,7 +72,7 @@ export default function Home() {
             </p>
           </div>
           <div className='grid gap-8'>
-            <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
+            <div className='p-6 py-8 flex flex-col gap-2'>
               <ZapIcon />
               <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
                 Lightweight and Fast
@@ -150,13 +150,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='grid gap-8'>
-            <div className='flex justify-center items-center gap-2'>
+          <div className='relative py-8 bg-zinc-900 border border-gray-700 rounded-md'>
+            <div className='absolute flex justify-center items-center gap-2 -top-5 left-1/2 right-1/2'>
               <Button
                 className={`${
                   currProcessNum !== 1
                     ? "bg-white"
-                    : "bg-gradient-linear-300 text-white -translate-y-2 transition-transform ease-in-out duration-500"
+                    : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
                 } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
                 onClick={() => setCurrentProcessNum(1)}
               >
@@ -166,7 +166,7 @@ export default function Home() {
                 className={`${
                   currProcessNum !== 2
                     ? "bg-white"
-                    : "bg-gradient-linear-300 text-white -translate-y-2 transition-transform ease-in-out duration-500"
+                    : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
                 } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
                 onClick={() => setCurrentProcessNum(2)}
               >
@@ -176,7 +176,7 @@ export default function Home() {
                 className={`${
                   currProcessNum !== 3
                     ? "bg-white"
-                    : "bg-gradient-linear-300 text-white -translate-y-2 transition-transform ease-in-out duration-500"
+                    : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
                 } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
                 onClick={() => setCurrentProcessNum(3)}
               >
@@ -187,10 +187,10 @@ export default function Home() {
             <div
               className={`${
                 currProcessNum !== 1 ? "hidden" : "flex"
-              } p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md`}
+              } p-6 py-8 flex-col gap-2`}
             >
               <LogInIcon />
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
                 Sign In
               </h4>
               <p>
@@ -208,19 +208,19 @@ export default function Home() {
             <div
               className={`${
                 currProcessNum !== 2 ? "hidden" : "flex"
-              } p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md`}
+              } p-6 py-8 flex-col gap-2`}
             >
               <UploadIcon />
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
                 Add your portfolio info
               </h4>
               <p>
-                Once signed in, it's time to customize your portfolio! You can
+                Once signed in, it is time to customize your portfolio! You can
                 easily add your personal information, such as your name, contact
-                details, and a short bio. You'll also have fields to input your
-                professional skills, past projects, and relevant experience.
-                There's even space to include links to your social media
-                profiles, GitHub repositories, or personal blogs. Our
+                details, and a short bio. You will also have fields to input
+                your professional skills, past projects, and relevant
+                experience. There is even space to include links to your social
+                media profiles, GitHub repositories, or personal blogs. Our
                 user-friendly interface allows you to edit and preview your
                 content as you go, ensuring everything looks perfect before you
                 proceed.
@@ -230,17 +230,17 @@ export default function Home() {
             <div
               className={`${
                 currProcessNum !== 3 ? "hidden" : "flex"
-              } p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md`}
+              } p-6 py-8 flex-col gap-2`}
             >
               <Share2Icon />
-              <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
                 Generate and Share
               </h4>
               <p>
-                With your details uploaded, you're just one click away from
+                With your details uploaded, you are just one click away from
                 creating your portfolio. The app instantly compiles your
                 information into a sleek, modern, and fully responsive one-page
-                website. Once generated, you'll receive a unique URL that you
+                website. Once generated, you will receive a unique URL that you
                 can share with potential employers, clients, or colleagues. The
                 portfolio is optimized for mobile and desktop, and you can
                 update it anytime by signing back in!
