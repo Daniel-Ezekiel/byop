@@ -21,8 +21,8 @@ export default function Home() {
   const [currProcessNum, setCurrentProcessNum] = useState<number>(1);
 
   return (
-    <div className='font-[family-name:var(--font-general-sans-regular)] p-4'>
-      <header className='max-h-[10dvh] flex justify-center items-center lg:p-4'>
+    <div className='flex flex-col justify-center items-center font-[family-name:var(--font-general-sans-regular)] p-4'>
+      <header className='max-h-[10dvh] w-full flex justify-center items-center lg:p-4'>
         <nav className='w-full max-w-[122.5rem]  flex space-between'>
           <Link
             href={"/"}
@@ -40,8 +40,8 @@ export default function Home() {
         </nav>
       </header>
 
-      <main className='grid place-items-center gap-16'>
-        <section className='min-h-[95dvh]  flex flex-col items-center justify-center gap-4 text-center sm:max-w-[28rem] md:max-w-[38rem] lg:max-w-[54rem]'>
+      <main className='max-w-[77.5rem] grid place-items-center gap-16'>
+        <section className='min-h-[95dvh] flex flex-col items-center justify-center gap-4 text-center sm:max-w-[28rem] md:max-w-[38rem] lg:max-w-[54rem]'>
           <h1 className='text-4xl font-[family-name:var(--font-general-sans-bold)] md:text-5xl lg:text-6xl'>
             Build a modern, responsive{" "}
             <span className='bg-gradient-linear-100 bg-clip-text text-transparent'>
@@ -63,16 +63,16 @@ export default function Home() {
           </Link>
         </section>
 
-        <section className='flex flex-col gap-8'>
+        <section className='mb-20 flex flex-col gap-8'>
           <div className='text-center'>
-            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
+            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
               features
             </h2>
-            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
+            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl'>
               Why use byop?
             </p>
           </div>
-          <div className='grid gap-8'>
+          <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
             <div className='p-6 py-8 flex flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md'>
               <Button
                 variant={"ghost"}
@@ -171,24 +171,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='flex flex-col gap-16'>
+        <section className='mt-20 flex flex-col gap-16'>
           <div className='text-center'>
-            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
+            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
               process
             </h2>
-            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
+            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl'>
               how to byop in 3 simple steps?
             </p>
           </div>
 
-          <div className='relative py-8 bg-zinc-900 border border-gray-700 rounded-md'>
-            <div className='absolute flex justify-center items-center gap-2 -top-5 left-1/2 right-1/2'>
+          <div className='relative py-8 bg-zinc-900 border border-gray-700 rounded-md max-w-[55rem] lg:px-12'>
+            <div className='absolute flex justify-center items-center gap-2 -top-5 left-1/2 right-1/2 sm:gap-4'>
               <Button
                 className={`${
                   currProcessNum !== 1
                     ? "bg-white"
                     : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
+                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
                 onClick={() => setCurrentProcessNum(1)}
               >
                 <span>01.</span> Initialize
@@ -198,7 +198,7 @@ export default function Home() {
                   currProcessNum !== 2
                     ? "bg-white"
                     : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
+                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
                 onClick={() => setCurrentProcessNum(2)}
               >
                 <span>02.</span> Upload
@@ -208,7 +208,7 @@ export default function Home() {
                   currProcessNum !== 3
                     ? "bg-white"
                     : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500`}
+                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
                 onClick={() => setCurrentProcessNum(3)}
               >
                 <span>03.</span> Publish
@@ -296,11 +296,11 @@ export default function Home() {
         </section>
 
         <section>
-          <div className='text-center flex flex-col justify-center items-center gap-4 py-28'>
-            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent'>
+          <div className='text-center flex flex-col justify-center items-center gap-4 py-28 max-w-[28rem]'>
+            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
               ready to byop?
             </h2>
-            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl'>
+            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl'>
               Build your own stunning, responsive Portfolio with ease today!
             </p>
             <Link
@@ -315,17 +315,21 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className='mt-12 border-t pt-4'>
+      <footer className='w-full mt-12 border-t pt-4'>
         <p className='text-sm font-[family-name:var(--font-general-sans-regular)] text-center text-gray-300'>
           © 2024{" "}
-          <span className='bg-gradient-linear-100 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-bold)]'>
+          <Link
+            href={"https://github.com/daniel-ezekiel/byop/"}
+            target='_blank'
+            className='bg-gradient-linear-100 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-bold)] border-b-2 border-b-sky-500 hover:border-none'
+          >
             byop.
-          </span>{" "}
+          </Link>{" "}
           by{" "}
           <Link
             href={"https://danielezekiel.vercel.app"}
             target='_blank'
-            className='bg-gradient-linear-300 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-semibold)] border-b-2 border-b-gray-500'
+            className='bg-gradient-linear-300 bg-clip-text text-transparent font-[family-name:var(--font-general-sans-semibold)] border-b-2 border-b-sky-500 hover:border-none'
           >
             Daniel Ezekiel
           </Link>
