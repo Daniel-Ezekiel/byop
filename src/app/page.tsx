@@ -22,11 +22,11 @@ export default function Home() {
 
   return (
     <div className='font-[family-name:var(--font-general-sans-regular)] p-4'>
-      <header className='max-h-[10dvh] flex items-center'>
+      <header className='max-h-[10dvh] flex items-center lg:p-4'>
         <nav className='w-full flex space-between'>
           <Link
             href={"/"}
-            className='text-2xl font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'
+            className='text-3xl font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'
           >
             byop.
           </Link>
@@ -41,14 +41,14 @@ export default function Home() {
       </header>
 
       <main className='grid place-items-center gap-16'>
-        <section className='min-h-[95dvh]  flex flex-col items-center justify-center gap-4 text-center'>
-          <h1 className='text-3xl font-[family-name:var(--font-general-sans-bold)]'>
+        <section className='min-h-[95dvh]  flex flex-col items-center justify-center gap-4 text-center sm:max-w-[28rem] md:max-w-[38rem] lg:max-w-[54rem]'>
+          <h1 className='text-4xl font-[family-name:var(--font-general-sans-bold)] md:text-5xl lg:text-6xl'>
             Build a modern, responsive{" "}
             <span className='bg-gradient-linear-100 bg-clip-text text-transparent'>
               portfolio website in minutes!
             </span>
           </h1>
-          <p className='p-2 text-sm font-[family-name:var(--font-general-sans-regular)] text-gray-300'>
+          <p className='p-2 font-[family-name:var(--font-general-sans-regular)] text-gray-300 md:px-12 md:text-lg lg:px-28'>
             Create and conveniently manage your own portfolio website with
             simplicity and ease in just a few clicks.
           </p>
@@ -57,7 +57,7 @@ export default function Home() {
             href='/'
             className={`${buttonVariants({
               variant: "outline",
-            })} px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] active:scale-95 transition-all ease-in-out duration-500`}
+            })} px-8 py-6 bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] text-base active:scale-95 transition-all ease-in-out duration-500`}
           >
             Get Started
           </Link>
