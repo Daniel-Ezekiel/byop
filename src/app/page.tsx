@@ -22,8 +22,8 @@ export default function Home() {
 
   return (
     <div className='font-[family-name:var(--font-general-sans-regular)] p-4'>
-      <header className='max-h-[10dvh] flex items-center lg:p-4'>
-        <nav className='w-full flex space-between'>
+      <header className='max-h-[10dvh] flex justify-center items-center lg:p-4'>
+        <nav className='w-full max-w-[122.5rem]  flex space-between'>
           <Link
             href={"/"}
             className='text-3xl font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'
