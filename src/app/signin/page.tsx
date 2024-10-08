@@ -1,3 +1,9 @@
+import MainLayout from "../_layouts/MainLayout";
+
 export default function SignIn() {
-  return <div>Sign In</div>;
+  return (
+    <MainLayout>
+      <div className='min-h-[80dvh]'>Sign In</div>
+    </MainLayout>
+  );
 }

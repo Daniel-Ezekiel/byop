@@ -2,8 +2,6 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import Header from "@/_components/Header";
-import Footer from "@/_components/Footer";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   HandshakeIcon,
@@ -18,6 +16,7 @@ import {
 } from "lucide-react";
 import SectionHeading from "@/_components/SectionHeading";
 import Card from "@/_components/Card";
+import MainLayout from "./_layouts/MainLayout";
 
 export default function Home() {
   const [currProcessNum, setCurrentProcessNum] = useState<number>(1);
@@ -83,119 +82,113 @@ export default function Home() {
   ];
 
   return (
-    <div className='flex flex-col justify-center items-center font-[family-name:var(--font-general-sans-regular)]'>
-      <Header />
+    <MainLayout>
+      <section className='min-h-[95dvh] flex flex-col items-center justify-center gap-4 text-center sm:max-w-[28rem] md:max-w-[38rem] lg:max-w-[54rem]'>
+        <h1 className='text-4xl font-[family-name:var(--font-general-sans-bold)] md:text-5xl lg:text-6xl'>
+          Build a modern, responsive{" "}
+          <span className='bg-gradient-linear-100 bg-clip-text text-transparent'>
+            portfolio website in minutes!
+          </span>
+        </h1>
+        <p className='p-2 font-[family-name:var(--font-general-sans-regular)] text-gray-300 md:px-12 md:text-lg lg:px-28'>
+          Create and conveniently manage your own portfolio website with
+          simplicity and ease in just a few clicks.
+        </p>
 
-      <main className='max-w-[77.5rem] grid place-items-center gap-16'>
-        <section className='min-h-[95dvh] flex flex-col items-center justify-center gap-4 text-center sm:max-w-[28rem] md:max-w-[38rem] lg:max-w-[54rem]'>
-          <h1 className='text-4xl font-[family-name:var(--font-general-sans-bold)] md:text-5xl lg:text-6xl'>
-            Build a modern, responsive{" "}
-            <span className='bg-gradient-linear-100 bg-clip-text text-transparent'>
-              portfolio website in minutes!
-            </span>
-          </h1>
-          <p className='p-2 font-[family-name:var(--font-general-sans-regular)] text-gray-300 md:px-12 md:text-lg lg:px-28'>
-            Create and conveniently manage your own portfolio website with
-            simplicity and ease in just a few clicks.
+        <Link
+          href='/signin'
+          className={`${buttonVariants({
+            variant: "outline",
+          })} px-8 py-6 bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] text-base active:scale-95 transition-all ease-in-out duration-500`}
+        >
+          Get Started
+        </Link>
+      </section>
+
+      <section className='mb-20 flex flex-col gap-8'>
+        <SectionHeading title='features' tagline='why use byop?' />
+
+        <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+          {featuresList.map((feature, i) => (
+            <Card
+              key={i}
+              icon={feature.icon}
+              name={feature.name}
+              description={feature.description}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className='mt-20 flex flex-col gap-16'>
+        <SectionHeading title='process' tagline='how to use byop' />
+
+        <div className='relative py-8 bg-zinc-900 border border-gray-700 rounded-md max-w-[55rem] lg:px-12'>
+          <div className='absolute flex justify-center items-center gap-2 -top-5 left-1/2 right-1/2 sm:gap-4'>
+            <Button
+              className={`${
+                currProcessNum !== 1
+                  ? "bg-white"
+                  : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
+              } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
+              onClick={() => setCurrentProcessNum(1)}
+            >
+              <span>01.</span> Initialize
+            </Button>
+            <Button
+              className={`${
+                currProcessNum !== 2
+                  ? "bg-white"
+                  : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
+              } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
+              onClick={() => setCurrentProcessNum(2)}
+            >
+              <span>02.</span> Upload
+            </Button>
+            <Button
+              className={`${
+                currProcessNum !== 3
+                  ? "bg-white"
+                  : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
+              } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
+              onClick={() => setCurrentProcessNum(3)}
+            >
+              <span>03.</span> Publish
+            </Button>
+          </div>
+
+          {processList.map((process, i) => (
+            <Card
+              key={i}
+              icon={process.icon}
+              type='process'
+              name={process.processName}
+              description={process.processDescription}
+              isHidden={currProcessNum !== i + 1}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <div className='text-center flex flex-col justify-center items-center gap-4 py-28 max-w-[28rem]'>
+          <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
+            ready to byop?
+          </h2>
+          <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl'>
+            Build your own stunning, responsive Portfolio with ease today!
           </p>
-
           <Link
             href='/signin'
             className={`${buttonVariants({
               variant: "outline",
-            })} px-8 py-6 bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] text-base active:scale-95 transition-all ease-in-out duration-500`}
+            })} px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] active:scale-95 transition-all ease-in-out duration-500`}
           >
             Get Started
           </Link>
-        </section>
-
-        <section className='mb-20 flex flex-col gap-8'>
-          <SectionHeading title='features' tagline='why use byop?' />
-
-          <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-            {featuresList.map((feature, i) => (
-              <Card
-                key={i}
-                icon={feature.icon}
-                name={feature.name}
-                description={feature.description}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section className='mt-20 flex flex-col gap-16'>
-          <SectionHeading title='process' tagline='how to use byop' />
-
-          <div className='relative py-8 bg-zinc-900 border border-gray-700 rounded-md max-w-[55rem] lg:px-12'>
-            <div className='absolute flex justify-center items-center gap-2 -top-5 left-1/2 right-1/2 sm:gap-4'>
-              <Button
-                className={`${
-                  currProcessNum !== 1
-                    ? "bg-white"
-                    : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
-                onClick={() => setCurrentProcessNum(1)}
-              >
-                <span>01.</span> Initialize
-              </Button>
-              <Button
-                className={`${
-                  currProcessNum !== 2
-                    ? "bg-white"
-                    : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
-                onClick={() => setCurrentProcessNum(2)}
-              >
-                <span>02.</span> Upload
-              </Button>
-              <Button
-                className={`${
-                  currProcessNum !== 3
-                    ? "bg-white"
-                    : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-                } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
-                onClick={() => setCurrentProcessNum(3)}
-              >
-                <span>03.</span> Publish
-              </Button>
-            </div>
-
-            {processList.map((process, i) => (
-              <Card
-                key={i}
-                icon={process.icon}
-                type='process'
-                name={process.processName}
-                description={process.processDescription}
-                isHidden={currProcessNum !== i + 1}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section>
-          <div className='text-center flex flex-col justify-center items-center gap-4 py-28 max-w-[28rem]'>
-            <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
-              ready to byop?
-            </h2>
-            <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl'>
-              Build your own stunning, responsive Portfolio with ease today!
-            </p>
-            <Link
-              href='/signin'
-              className={`${buttonVariants({
-                variant: "outline",
-              })} px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] active:scale-95 transition-all ease-in-out duration-500`}
-            >
-              Get Started
-            </Link>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        </div>
+      </section>
+    </MainLayout>
   );
 }
 
