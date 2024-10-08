@@ -69,16 +69,16 @@ export default function Home() {
         "The first step is quick and secure. Sign in with your preferred method using OAuth, allowing you to authenticate through popular platforms like Google or GitHub. This ensures a seamless and secure login process without the need to create a new account or remember another password. Your identity is verified instantly, and you can get started without delay. Plus, you have full control over the data shared during authentication, ensuring privacy.",
     },
     {
-      icon: <LogInIcon className='text-sky-600' />,
-      processName: "Sign In",
+      icon: <UploadIcon className='text-sky-600' />,
+      processName: "Add your portfolio info",
       processDescription:
-        "The first step is quick and secure. Sign in with your preferred method using OAuth, allowing you to authenticate through popular platforms like Google or GitHub. This ensures a seamless and secure login process without the need to create a new account or remember another password. Your identity is verified instantly, and you can get started without delay. Plus, you have full control over the data shared during authentication, ensuring privacy.",
+        "Once signed in, it is time to customize your portfolio! You can easily add your personal information, such as your name, contact details, and a short bio. You will also have fields to input your professional skills, past projects, and relevant experience. There is even space to include links to your social media profiles, GitHub repositories, or personal blogs. Our user-friendly interface allows you to edit and preview your content as you go, ensuring everything looks perfect before you proceed.",
     },
     {
-      icon: <LogInIcon className='text-sky-600' />,
-      processName: "Sign In",
+      icon: <Share2Icon className='text-sky-600' />,
+      processName: "Generate and Share",
       processDescription:
-        "The first step is quick and secure. Sign in with your preferred method using OAuth, allowing you to authenticate through popular platforms like Google or GitHub. This ensures a seamless and secure login process without the need to create a new account or remember another password. Your identity is verified instantly, and you can get started without delay. Plus, you have full control over the data shared during authentication, ensuring privacy.",
+        "With your details uploaded, you are just one click away from creating your portfolio. The app instantly compiles your information into a sleek, modern, and fully responsive one-page website. Once generated, you will receive a unique URL that you can share with potential employers, clients, or colleagues. The portfolio is optimized for mobile and desktop, and you can update it anytime by signing back in!",
     },
   ];
 
@@ -171,58 +171,6 @@ export default function Home() {
                 isHidden={currProcessNum !== i + 1}
               />
             ))}
-
-            <div
-              className={`${
-                currProcessNum !== 2 ? "hidden" : "flex"
-              } p-6 py-8 flex-col gap-2`}
-            >
-              <Button
-                variant={"ghost"}
-                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
-              >
-                <UploadIcon className='text-sky-600' />
-              </Button>
-              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
-                Add your portfolio info
-              </h4>
-              <p>
-                Once signed in, it is time to customize your portfolio! You can
-                easily add your personal information, such as your name, contact
-                details, and a short bio. You will also have fields to input
-                your professional skills, past projects, and relevant
-                experience. There is even space to include links to your social
-                media profiles, GitHub repositories, or personal blogs. Our
-                user-friendly interface allows you to edit and preview your
-                content as you go, ensuring everything looks perfect before you
-                proceed.
-              </p>
-            </div>
-
-            <div
-              className={`${
-                currProcessNum !== 3 ? "hidden" : "flex"
-              } p-6 py-8 flex-col gap-2`}
-            >
-              <Button
-                variant={"ghost"}
-                className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
-              >
-                <Share2Icon className='text-sky-600' />
-              </Button>
-              <h4 className='mt-3 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
-                Generate and Share
-              </h4>
-              <p>
-                With your details uploaded, you are just one click away from
-                creating your portfolio. The app instantly compiles your
-                information into a sleek, modern, and fully responsive one-page
-                website. Once generated, you will receive a unique URL that you
-                can share with potential employers, clients, or colleagues. The
-                portfolio is optimized for mobile and desktop, and you can
-                update it anytime by signing back in!
-              </p>
-            </div>
           </div>
         </section>
 
