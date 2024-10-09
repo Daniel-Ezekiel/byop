@@ -14,8 +14,8 @@ import {
   UploadIcon,
   ZapIcon,
 } from "lucide-react";
-import SectionHeading from "@/_components/SectionHeading";
-import Card from "@/_components/Card";
+import SectionHeading from "@/app/_components/SectionHeading";
+import Card from "@/app/_components/Card";
 import MainLayout from "./_layouts/MainLayout";
 
 export default function Home() {
@@ -191,4 +191,3 @@ export default function Home() {
     </MainLayout>
   );
 }
-
