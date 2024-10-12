@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import MainLayout from "../_layouts/MainLayout";
-import { LogInIcon } from "lucide-react";
+import { GithubIcon, LinkedinIcon, LogInIcon } from "lucide-react";
 import Link from "next/link";
+import { Google } from "iconsax-react";
 
 export default function SignIn() {
   return (
@@ -9,7 +10,7 @@ export default function SignIn() {
       <div className='min-h-[80dvh] py-20 flex flex-col justify-center'>
         <div className='text-center mb-12 px-4'>
           <h1 className='font-[family-name:var(--font-general-sans-bold)] uppercase text-2xl sm:text-3xl lg:text-4xl'>
-            Sign up
+            Sign In
           </h1>
           <p>
             Log in to{" "}
@@ -72,9 +73,16 @@ export default function SignIn() {
           <span className='h-[0.1rem] bg-white'></span>
           <span className='col-span-2 text-center'>Or continue with</span>
           <span className='h-[0.1rem] bg-white'></span>
-          <div>
-            <span>Git</span>
-            <span>Git</span>
+          <div className='mt-4 col-span-full flex justify-center items-center gap-4'>
+            <Button variant='outline' className='w-full'>
+              <Google variant='Bold' />
+            </Button>
+            <Button variant='outline' className='w-full'>
+              <GithubIcon />
+            </Button>
+            <Button variant='outline' className='w-full'>
+              <LinkedinIcon />
+            </Button>
           </div>
         </div>
       </div>
