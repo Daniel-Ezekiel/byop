@@ -7,6 +7,7 @@ type inputTypes = {
   name: string;
   placeholder: string;
   required?: boolean;
+  className?: string;
 };
 
 function Input({
@@ -16,9 +17,10 @@ function Input({
   name,
   placeholder,
   required = false,
+  className = "col-span-full",
 }: inputTypes) {
   return (
-    <div className='grid gap-1'>
+    <div className={`${className} grid gap-1`}>
       <label htmlFor={id} className='text-sm text-gray-300 sm:text-base'>
         {label}
       </label>
@@ -27,7 +29,7 @@ function Input({
         name={name}
         id={id}
         placeholder={placeholder}
-        className='rounded-sm p-2 bg-transparent border border-gray-700 text-gray-300 placeholder:text-sm'
+        className='w-full rounded-sm p-2 bg-transparent border border-gray-700 text-gray-300 placeholder:text-sm'
         required={required}
       />
     </div>

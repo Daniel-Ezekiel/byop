@@ -14,7 +14,7 @@ export default function SignIn() {
           <h1 className='font-[family-name:var(--font-general-sans-bold)] uppercase text-2xl sm:text-3xl lg:text-4xl'>
             Sign In
           </h1>
-          <p className='md:text-lg  lg:text-xl'>
+          <p className='mt-4 md:text-lg  lg:text-xl'>
             Log in to{" "}
             <span className='font-[family-name:var(--font-general-sans-semibold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
               build your own portfolio for free
@@ -29,7 +29,7 @@ export default function SignIn() {
           <Input
             id='email'
             type='email'
-            label='Email'
+            label='Email*'
             name='email'
             placeholder='Enter your email address'
             required={true}
@@ -38,7 +38,7 @@ export default function SignIn() {
           <Input
             id='password'
             type='password'
-            label='Password'
+            label='Password*'
             name='password'
             placeholder='Enter your password'
             required={true}
