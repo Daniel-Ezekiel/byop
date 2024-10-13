@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import MainLayout from "../_layouts/MainLayout";
-import { GithubIcon, LinkedinIcon, LogInIcon } from "lucide-react";
+import { LinkedinIcon, LogInIcon } from "lucide-react";
 import Link from "next/link";
 import { Google } from "iconsax-react";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import Input from "../_components/Input";
 
 export default function SignIn() {
   return (
@@ -24,35 +26,23 @@ export default function SignIn() {
           action=''
           className='grid gap-4 p-6 bg-zinc-900 border-gray-700 rounded-md border sm:w-[25rem]'
         >
-          <div className='grid gap-1'>
-            <label
-              htmlFor='email'
-              className='text-sm text-gray-300 sm:text-base'
-            >
-              Email
-            </label>
-            <input
-              type='email'
-              name='email'
-              id='email'
-              className='rounded-sm p-2 bg-transparent border border-gray-700 text-gray-300'
-            />
-          </div>
+          <Input
+            id='email'
+            type='email'
+            label='Email'
+            name='email'
+            placeholder='Enter your email address'
+            required={true}
+          />
 
-          <div className='grid gap-1'>
-            <label
-              htmlFor='password'
-              className='text-sm text-gray-300 sm:text-base'
-            >
-              Password
-            </label>
-            <input
-              type='password'
-              name='password'
-              id='password'
-              className='rounded-sm p-2 bg-transparent border border-gray-700 text-gray-300'
-            />
-          </div>
+          <Input
+            id='password'
+            type='password'
+            label='Password'
+            name='password'
+            placeholder='Enter your password'
+            required={true}
+          />
 
           <div className='flex justify-between'>
             <p className='text-[0.75rem] sm:text-sm'>
@@ -69,8 +59,8 @@ export default function SignIn() {
             </Link>
           </div>
 
-          <Button className='mt-4 bg-gradient-linear-200 text-white md:py-6 md:text-lg'>
-            <LogInIcon className='mr-2' />
+          <Button className='mt-4 bg-gradient-linear-200 text-white md:py-4 md:text-base'>
+            <LogInIcon className='mr-2' size={20} />
             Sign In
           </Button>
         </form>
@@ -84,7 +74,7 @@ export default function SignIn() {
               <Google variant='Bold' />
             </Button>
             <Button variant='outline' className='w-full'>
-              <GithubIcon />
+              <GitHubLogoIcon className='w-6 h-6' />
             </Button>
             <Button variant='outline' className='w-full'>
               <LinkedinIcon />
