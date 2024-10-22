@@ -8,7 +8,10 @@ import {
   KeyRoundIcon,
   LogInIcon,
   MonitorSmartphoneIcon,
+  Palette,
+  PaletteIcon,
   RocketIcon,
+  Settings2Icon,
   Share2Icon,
   SunDimIcon,
   TrendingUpIcon,
@@ -191,7 +194,7 @@ export default function Home() {
             variant={"ghost"}
             className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30  md:w-16 md:h-16'
           >
-            <SunDimIcon />
+            <Settings2Icon className='text-sky-600 lg:h-6 lg:w-6' />
           </Button>
           <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg lg:text-xl xl:text-2xl'>
             Techies
@@ -210,7 +213,7 @@ export default function Home() {
             variant={"ghost"}
             className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 md:w-16 md:h-16'
           >
-            <SunDimIcon />
+            <PaletteIcon className='text-sky-600 lg:h6  lg:w-6' />
           </Button>
           <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg lg:text-xl xl:text-2xl'>
             Creatives
