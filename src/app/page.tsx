@@ -10,6 +10,7 @@ import {
   MonitorSmartphoneIcon,
   RocketIcon,
   Share2Icon,
+  SunDimIcon,
   TrendingUpIcon,
   UploadIcon,
   ZapIcon,
@@ -90,7 +91,7 @@ export default function Home() {
             portfolio website in minutes!
           </span>
         </h1>
-        <p className='p-2 font-[family-name:var(--font-general-sans-regular)] text-gray-300 md:px-12 md:text-lg lg:px-28'>
+        <p className='p-2 font-[family-name:var(--font-general-sans-regular)] text-gray-300 md:px-12 md:text-lg lg:px-28 lg:text-xl xl:text-2xl'>
           Create and conveniently manage your own portfolio website with
           simplicity and ease in just a few clicks.
         </p>
@@ -99,7 +100,7 @@ export default function Home() {
           href='/signin'
           className={`${buttonVariants({
             variant: "outline",
-          })} px-8 py-6 bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] text-base active:scale-95 transition-all ease-in-out duration-500`}
+          })} px-8 py-6 bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] text-base active:scale-95 transition-all ease-in-out duration-500 lg:text-lg xl:text-xl`}
         >
           Get Started
         </Link>
@@ -170,19 +171,82 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        id='who-can-use'
+        className='mt-32 mb-20 grid gap-8 md:grid md:grid-cols-5 md:p-8 lg:gap-x-16'
+      >
+        <div className='text-center md:col-span-2 md: pt-8 md:text-left'>
+          <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
+            who can use byop?
+          </h2>
+          <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl'>
+            BYOP is great for...
+          </p>
+        </div>
+
+        <div
+          className={`flex p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md md:col-span-3 md:col-start-3`}
+        >
+          <Button
+            variant={"ghost"}
+            className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30  md:w-16 md:h-16'
+          >
+            <SunDimIcon />
+          </Button>
+          <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg lg:text-xl xl:text-2xl'>
+            Techies
+          </h4>
+          <p className='lg:text-lg'>
+            Any Techie can use BYOP! <br /> Frontend, Backend, Fullstack
+            developers, UI/UX Designers, Data Scientists, Data Analysts and
+            more.
+          </p>
+        </div>
+
+        <div
+          className={`flex p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md md:col-span-3 md:col-start-3`}
+        >
+          <Button
+            variant={"ghost"}
+            className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 md:w-16 md:h-16'
+          >
+            <SunDimIcon />
+          </Button>
+          <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg lg:text-xl xl:text-2xl'>
+            Creatives
+          </h4>
+          <p className='lg:text-lg'>
+            Build your portfolio using byop as a creative! <br /> Artist,
+            Interior Designer, Product Designer, Architects, Fashion Designers,
+            Photographers and many more.
+          </p>
+        </div>
+
+        {/* <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+          {featuresList.map((feature, i) => (
+            <Card
+              key={i}
+              icon={feature.icon}
+              name={feature.name}
+              description={feature.description}
+            />
+          ))}
+        </div> */}
+      </section>
+
       <section>
-        <div className='text-center flex flex-col justify-center items-center gap-4 py-28 max-w-[28rem]'>
+        <div className='text-center flex flex-col justify-center items-center gap-4 py-28 max-w-[36rem]'>
           <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
             ready to byop?
           </h2>
-          <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl'>
+          <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl'>
             Build your own stunning, responsive Portfolio with ease today!
           </p>
           <Link
             href='/signin'
             className={`${buttonVariants({
               variant: "outline",
-            })} px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] active:scale-95 transition-all ease-in-out duration-500`}
+            })} px-8 text-sm bg-gradient-linear-300 text-gray-200 font-[family-name:var(--font-general-sans-medium)] active:scale-95 transition-all ease-in-out duration-500 lg:mt-6 lg:p-6 lg:text-lg`}
           >
             Get Started
           </Link>

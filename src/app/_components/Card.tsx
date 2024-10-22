@@ -24,14 +24,14 @@ function Card({
     >
       <Button
         variant={"ghost"}
-        className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 d'
+        className='w-12 h-12 p-2 rounded-full bg-sky-600 bg-opacity-30 md:w-16 md:h-16'
       >
         {icon}
       </Button>
-      <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg'>
+      <h4 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-200 bg-clip-text text-transparent text-lg lg:text-xl xl:text-2xl'>
         {name}
       </h4>
-      <p>{description}</p>
+      <p className='lg:text-lg'>{description}</p>
     </div>
   );
 }

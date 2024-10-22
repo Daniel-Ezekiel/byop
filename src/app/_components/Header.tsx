@@ -55,7 +55,7 @@ export default function Header() {
 
             <li>
               <Link
-                href={"/#process"}
+                href={"/#who-can-use"}
                 className='font-[family-name:var(--font-general-sans-semibold)] hover:underline'
               >
                 <span className='font-[family-name:var(--font-general-sans-bold)] pr-2 bg-gradient-linear-200 bg-clip-text text-transparent'>

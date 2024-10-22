@@ -9,7 +9,7 @@ function SectionHeading({ title, tagline }: sectionHeadingTypes) {
       <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
         {title}
       </h2>
-      <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl'>
+      <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl'>
         {tagline}
       </p>
     </div>
