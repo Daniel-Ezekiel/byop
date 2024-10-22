@@ -105,7 +105,7 @@ export default function Home() {
         </Link>
       </section>
 
-      <section className='mb-20 flex flex-col gap-8'>
+      <section id='features' className='mt-20 mb-20 flex flex-col gap-8'>
         <SectionHeading title='features' tagline='why use byop?' />
 
         <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='mt-20 flex flex-col gap-16'>
+      <section id='process' className='mt-20 flex flex-col gap-16'>
         <SectionHeading title='process' tagline='how to use byop' />
 
         <div className='relative py-8 bg-zinc-900 border border-gray-700 rounded-md max-w-[55rem] lg:px-12'>
