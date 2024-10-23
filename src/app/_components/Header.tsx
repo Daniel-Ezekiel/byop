@@ -25,7 +25,7 @@ export default function Header() {
 
         <div className='ml-auto mr-0 items-center justify-center gap-10 lg:flex'>
           <ul
-            className={`fixed top-0 right-0 h-[100dvh] w-[100dvw] flex flex-col p-8 bg-black/65 backdrop-blur-[0.25rem] items-start justify-center gap-6 transition-all ease-in-out duration-5000 ${
+            className={`fixed top-0 h-[100dvh] w-[100dvw] flex flex-col p-8 bg-black/65 backdrop-blur-[0.25rem] items-start justify-center gap-6 transition-all ease-in-out duration-5000 ${
               openMenu ? "right-0" : "-right-[100dvw]"
             } lg:static lg:flex-row lg:items-center lg:h-fit lg:w-fit lg:bg-transparent lg:backdrop-blur-0 lg:p-0`}
           >
