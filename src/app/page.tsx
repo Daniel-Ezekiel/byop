@@ -174,7 +174,7 @@ export default function Home() {
 
       <section
         id='who-can-use'
-        className='mt-32 mb-20 grid gap-8 md:grid md:grid-cols-5 md:p-8 lg:gap-x-16'
+        className='max-w-[77.5rem] mt-32 mb-20 grid gap-8 md:grid md:grid-cols-5 md:p-8 lg:gap-x-16'
       >
         <div className='text-center md:col-span-2 md: pt-8 md:text-left'>
           <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>

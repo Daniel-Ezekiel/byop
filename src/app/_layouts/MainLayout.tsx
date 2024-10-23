@@ -13,7 +13,7 @@ export default function MainLayout({
     <div className='flex flex-col justify-center items-center font-[family-name:var(--font-general-sans-regular)]'>
       {isDashboardPage ? <DashboardNav /> : <Header />}
 
-      <main className='max-w-[77.5rem] grid place-items-center gap-16'>
+      <main className='max-w-[90rem] min-h-[80dvh] grid justify-items-center gap-16 xl:w-[75rem] 2xl:w-[90rem]'>
         {children}
       </main>
 
