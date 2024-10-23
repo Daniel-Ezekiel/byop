@@ -3,8 +3,8 @@ import React from "react";
 
 function Dashboard() {
   return (
-    <MainLayout>
-      <div>Dashboard</div>
+    <MainLayout isDashboardPage={true}>
+      <div className='min-h-[70dvh] my-12'>Dashboard</div>
     </MainLayout>
   );
 }
