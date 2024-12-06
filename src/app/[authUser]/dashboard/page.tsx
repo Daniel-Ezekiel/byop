@@ -1,13 +1,12 @@
 import MainLayout from "@/app/_layouts/MainLayout";
 import ImgBuildPortfolio from "@/assets/build-portfolio.svg";
 import Image from "next/image";
-import React from "react";
 
 function Dashboard() {
   return (
     <MainLayout isDashboardPage={true}>
-      <section className='py-12'>
-        <div className='w-full flex items-center justify-between rounded-xl p-4 py-6 bg-gradient-linear-300 md:px-10 lg:gap-10 lg:px-16 lg:pr-16 xl:w-[75rem] 2xl:w-[90rem]'>
+      <section className='w-full py-8'>
+        <div className='w-full flex items-center justify-between rounded-xl p-4 py-6 bg-gradient-linear-300 md:px-10 lg:gap-10 lg:px-16 lg:pr-16'>
           <div className='sm:w-1/2'>
             <h1 className='w-[max-content] font-[family-name:var(--font-general-sans-semibold)] text-2xl md:text-3xl lg:text-4xl xl:text-5xl'>
               Good morning Daniel!

@@ -45,11 +45,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`dark ${generalSansLight.variable} ${generalSansRegular.variable} ${generalSansMedium.variable} ${generalSansSemibold.variable} ${generalSansBold.variable} font-[family-name:var(--font-general-sans-regular)] p-4 antialiased dark:bg-[#09090b] dark:text-white`}
+        className={`dark ${generalSansLight.variable} ${generalSansRegular.variable} ${generalSansMedium.variable} ${generalSansSemibold.variable} ${generalSansBold.variable} font-[family-name:var(--font-general-sans-regular)] antialiased dark:bg-[#09090b] dark:text-white`}
       >
         {children}
       </body>
     </html>
   );
 }
-
