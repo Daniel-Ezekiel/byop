@@ -35,7 +35,7 @@ export default function MainLayout({
       )}
 
       {!isDashboardPage && (
-        <div className='flex flex-col justify-center items-center font-[family-name:var(--font-general-sans-regular)]'>
+        <div className='p-4 flex flex-col justify-center items-center font-[family-name:var(--font-general-sans-regular)]'>
           <main className='max-w-[90rem] min-h-[80dvh] grid justify-items-center gap-16 xl:w-[75rem] 2xl:w-[90rem]'>
             {children}
           </main>

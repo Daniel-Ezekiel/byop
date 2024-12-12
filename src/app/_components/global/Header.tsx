@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className='max-h-[10dvh] w-full flex items-center lg:p-4'>
+    <header className='p-4 max-h-[10dvh] w-full flex items-center lg:p-4'>
       <nav className='relative w-full max-w-[122.5rem] mx-auto flex items-center space-between'>
         <Link
           href={"/"}
@@ -91,7 +91,7 @@ export default function Header() {
 
         <Button
           variant='ghost'
-          className='block ml-auto z-50 lg:hidden lg:z-0'
+          className='block ml-auto p-0 z-50 lg:hidden lg:z-0'
           onClick={handleMenuClick}
         >
           {!openMenu ? <MenuIcon /> : <XIcon />}
