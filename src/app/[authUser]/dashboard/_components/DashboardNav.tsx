@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { User2Icon } from "lucide-react";
+import { MenuIcon, User2Icon, XIcon } from "lucide-react";
 import React from "react";
 
-function DashboardNav() {
+function DashboardNav({
+  isMenuOpen,
+  handleMenuToggle,
+}: {
+  isMenuOpen: boolean;
+  handleMenuToggle: () => void;
+}) {
   const computeDate = () => {
     const today = new Date();
     const options: Intl.DateTimeFormatOptions = {
@@ -12,10 +18,10 @@ function DashboardNav() {
       day: "numeric",
     };
 
-    return today.toLocaleDateString("en-GB", options);
+    return today.toLocaleDateString("en-US", options);
   };
   return (
-    <header className='max-h-[10dvh] w-full border-b p-4 flex items-center lg:p-4'>
+    <header className='fixed top-0 left-0 min-h-[4.56rem] max-h-[10dvh] w-full bg-background border-b p-4 flex items-center shadow-2xl lg:p-4'>
       <nav className='relative w-full max-w-[122.5rem] mx-auto flex items-center space-between lg:grid lg:grid-cols-3'>
         <span className='relative block text-4xl font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent z-50'>
           byop.{" "}
@@ -30,13 +36,22 @@ function DashboardNav() {
           </span>
         </div>
 
-        <Button
-          variant='ghost'
-          className='flex items-center justify-center h-10 w-10 ml-auto p-2 border-2 border-sky-700 rounded-full'
-          //   onClick={handleMenuClick}
-        >
-          <User2Icon />
-        </Button>
+        <div className='ml-auto flex items-center gap-3'>
+          <Button
+            variant='ghost'
+            className='flex items-center justify-center h-10 w-10 ml-auto p-2 border-2 border-sky-700 rounded-full'
+            //   onClick={handleMenuClick}
+          >
+            <User2Icon />
+          </Button>
+          <Button
+            variant='ghost'
+            className='flex items-center justify-center h-10 w-10 p-2 xl:hidden'
+            onClick={handleMenuToggle}
+          >
+            {isMenuOpen ? <XIcon /> : <MenuIcon />}
+          </Button>
+        </div>
       </nav>
     </header>
   );

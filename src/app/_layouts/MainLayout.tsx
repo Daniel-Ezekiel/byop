@@ -1,7 +1,9 @@
+"use client";
 import Header from "@/app/_components/Header";
 import Footer from "@/app/_components/Footer";
 import DashboardNav from "../[authUser]/dashboard/_components/DashboardNav";
 import DashboardSidebar from "../[authUser]/dashboard/_components/DashboardSidebar";
+import { useState } from "react";
 
 export default function MainLayout({
   children,
@@ -10,13 +12,22 @@ export default function MainLayout({
   children: React.ReactNode | React.ReactNode[] | null;
   isDashboardPage?: boolean;
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
   return (
     <>
-      {isDashboardPage ? <DashboardNav /> : <Header />}
+      {isDashboardPage ? (
+        <DashboardNav
+          isMenuOpen={isMenuOpen}
+          handleMenuToggle={() => setIsMenuOpen(!isMenuOpen)}
+        />
+      ) : (
+        <Header />
+      )}
 
       {isDashboardPage && (
-        <div className='xl:ml-[18rem]'>
-          <DashboardSidebar />
+        <div className='mt-[4.56rem] xl:ml-[18rem]'>
+          <DashboardSidebar isMenuOpen={isMenuOpen} />
           <main className='min-h-[80dvh] px-6 grid justify-items-center gap-16 xl:px-8 '>
             {children}
           </main>
