@@ -4,7 +4,7 @@ import { LinkedinIcon, LogInIcon } from "lucide-react";
 import Link from "next/link";
 import { Google } from "iconsax-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import Input from "../_components/Input";
+import Input from "../_components/global/Input";
 
 export default function SignUp() {
   return (

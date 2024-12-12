@@ -1,6 +1,6 @@
 "use client";
-import Header from "@/app/_components/Header";
-import Footer from "@/app/_components/Footer";
+import Header from "@/app/_components/global/Header";
+import Footer from "@/app/_components/global/Footer";
 import DashboardNav from "../[authUser]/dashboard/_components/DashboardNav";
 import DashboardSidebar from "../[authUser]/dashboard/_components/DashboardSidebar";
 import { useState } from "react";
