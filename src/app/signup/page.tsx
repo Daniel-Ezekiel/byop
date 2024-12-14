@@ -5,24 +5,41 @@ import Link from "next/link";
 import { Google } from "iconsax-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Input from "../_components/global/Input";
+import * as motion from "motion/react-client";
 
 export default function SignUp() {
   return (
     <MainLayout>
       <div className='min-h-[85dvh] py-20 flex flex-col justify-center items-center'>
         <div className='text-center mb-12 px-4'>
-          <h1 className='font-[family-name:var(--font-general-sans-bold)] uppercase text-2xl sm:text-3xl lg:text-4xl'>
+          <motion.h1
+            initial={{ opacity: 0, translateY: 25 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            viewport={{ once: true }}
+            className='font-[family-name:var(--font-general-sans-bold)] uppercase text-2xl sm:text-3xl lg:text-4xl'
+          >
             Sign Up
-          </h1>
-          <p className='mt-4 md:text-lg lg:text-xl'>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, translateY: 25 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
+            viewport={{ once: true }}
+            className='mt-4 md:text-lg lg:text-xl'
+          >
             Create an account to{" "}
             <span className='font-[family-name:var(--font-general-sans-semibold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
               build your own portfolio for free
             </span>
-          </p>
+          </motion.p>
         </div>
 
-        <form
+        <motion.form
+          initial={{ opacity: 0, translateY: 25 }}
+          whileInView={{ opacity: 1, translateY: 0 }}
+          transition={{ duration: 0.5, delay: 1, type: "spring" }}
+          viewport={{ once: true }}
           action=''
           className='grid grid-cols-2 gap-4 p-6 bg-zinc-900 border-gray-700 rounded-md border sm:w-[25rem]'
         >
@@ -91,13 +108,28 @@ export default function SignUp() {
             <LogInIcon className='mr-2' size={20} />
             Sign Up
           </Button>
-        </form>
+        </motion.form>
 
-        <div className='w-full mt-8 grid grid-cols-4 justify-center items-center sm:w-[25rem]'>
-          <span className='h-[0.1rem] bg-white'></span>
-          <span className='col-span-2 text-center'>Or continue with</span>
-          <span className='h-[0.1rem] bg-white'></span>
-          <div className='mt-4 col-span-full flex justify-center items-center gap-4'>
+        <div className='max-w-[25rem] w-full mt-8 grid justify-stretch items-center'>
+          <motion.div
+            initial={{ opacity: 0, translateY: 25 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, delay: 1.5, type: "spring" }}
+            viewport={{ once: true }}
+            className='min-w-full grid grid-cols-4 justify-center items-center'
+          >
+            <span className='h-[0.1rem] bg-white'></span>
+            <span className='col-span-2 text-center'>Or continue with</span>
+            <span className='h-[0.1rem] bg-white'></span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, translateY: 25 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, delay: 2, type: "spring" }}
+            viewport={{ once: true }}
+            className='mt-4 col-span-full flex justify-center items-center gap-4'
+          >
             <Button variant='outline' className='w-full'>
               <Google variant='Bold' />
             </Button>
@@ -107,7 +139,7 @@ export default function SignUp() {
             <Button variant='outline' className='w-full'>
               <LinkedinIcon />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </MainLayout>
