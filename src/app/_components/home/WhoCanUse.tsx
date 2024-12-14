@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { PaletteIcon, Settings2Icon } from "lucide-react";
+import * as motion from "motion/react-client";
 
 function WhoCanUse() {
   return (
@@ -8,15 +9,31 @@ function WhoCanUse() {
       className='max-w-[77.5rem] mt-32 mb-20 grid gap-8 md:grid md:grid-cols-5 md:p-8 lg:gap-x-16'
     >
       <div className='text-center md:col-span-2 md: pt-8 md:text-left'>
-        <h2 className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'>
+        <motion.h2
+          initial={{ opacity: 0, translateX: -10 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 0.5, type: "spring" }}
+          viewport={{ once: true }}
+          className='font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-300 bg-clip-text text-transparent sm:text-lg'
+        >
           who can use byop?
-        </h2>
-        <p className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl'>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, translateX: -25 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
+          viewport={{ once: true }}
+          className='font-[family-name:var(--font-general-sans-semibold)] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl'
+        >
           BYOP is great for...
-        </p>
+        </motion.p>
       </div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, translateX: 25 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        transition={{ duration: 0.5, delay: 1, type: "spring" }}
+        viewport={{ once: true }}
         className={`flex p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md md:col-span-3 md:col-start-3`}
       >
         <Button
@@ -32,9 +49,13 @@ function WhoCanUse() {
           Any Techie can use BYOP! <br /> Frontend, Backend, Fullstack
           developers, UI/UX Designers, Data Scientists, Data Analysts and more.
         </p>
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, translateX: 25 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        transition={{ duration: 0.5, delay: 1.5, type: "spring" }}
+        viewport={{ once: true }}
         className={`flex p-6 py-8 flex-col gap-2 bg-zinc-900 border border-gray-700 rounded-md md:col-span-3 md:col-start-3`}
       >
         <Button
@@ -51,7 +72,7 @@ function WhoCanUse() {
           Designer, Product Designer, Architects, Fashion Designers,
           Photographers and many more.
         </p>
-      </div>
+      </motion.div>
 
       {/* <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
       {featuresList.map((feature, i) => (

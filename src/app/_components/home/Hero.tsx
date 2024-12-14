@@ -20,7 +20,7 @@ function Hero() {
       <motion.p
         initial={{ opacity: 0, translateY: 10 }}
         animate={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 0.5, delay: 0.25, type: "spring" }}
+        transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
         className='p-2 font-[family-name:var(--font-general-sans-regular)] text-gray-300 md:px-12 md:text-lg lg:px-28 lg:text-xl xl:text-2xl'
       >
         Create and conveniently manage your own portfolio website with
@@ -30,7 +30,7 @@ function Hero() {
       <motion.div
         initial={{ opacity: 0, translateY: 10 }}
         animate={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
+        transition={{ duration: 0.5, delay: 1, type: "spring" }}
       >
         <Link
           href='/signin'

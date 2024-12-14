@@ -4,6 +4,7 @@ import SectionHeading from "../global/SectionHeading";
 import { LogInIcon, Share2Icon, UploadIcon } from "lucide-react";
 import Card from "../global/Card";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 const processList = [
   {
@@ -35,41 +36,63 @@ function Process() {
 
       <div className='relative py-8 bg-zinc-900 border border-gray-700 rounded-md max-w-[55rem] lg:px-12'>
         <div className='absolute flex justify-center items-center gap-2 -top-5 left-1/2 right-1/2 sm:gap-4'>
-          <Button
-            className={`${
-              currProcessNum !== 1
-                ? "bg-white"
-                : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-            } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
-            onClick={() => setCurrentProcessNum(1)}
+          <motion.div
+            initial={{ opacity: 0, translateY: -10 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            viewport={{ once: true }}
           >
-            <span>01.</span> Initialize
-          </Button>
-          <Button
-            className={`${
-              currProcessNum !== 2
-                ? "bg-white"
-                : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-            } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
-            onClick={() => setCurrentProcessNum(2)}
+            <Button
+              className={`${
+                currProcessNum !== 1
+                  ? "bg-white"
+                  : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
+              } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
+              onClick={() => setCurrentProcessNum(1)}
+            >
+              <span>01.</span> Initialize
+            </Button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateY: -10 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
+            viewport={{ once: true }}
           >
-            <span>02.</span> Upload
-          </Button>
-          <Button
-            className={`${
-              currProcessNum !== 3
-                ? "bg-white"
-                : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
-            } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
-            onClick={() => setCurrentProcessNum(3)}
+            <Button
+              className={`${
+                currProcessNum !== 2
+                  ? "bg-white"
+                  : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
+              } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
+              onClick={() => setCurrentProcessNum(2)}
+            >
+              <span>02.</span> Upload
+            </Button>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateY: -10 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, delay: 1, type: "spring" }}
+            viewport={{ once: true }}
           >
-            <span>03.</span> Publish
-          </Button>
+            <Button
+              className={`${
+                currProcessNum !== 3
+                  ? "bg-white"
+                  : "bg-gradient-linear-300 text-white -translate-y-1 transition-transform ease-in-out duration-500"
+              } font-[family-name:var(--font-general-sans-semibold)] active:scale-75 transition-all ease-in-out duration-500 sm:text-base sm:py-4 sm:px-8`}
+              onClick={() => setCurrentProcessNum(3)}
+            >
+              <span>03.</span> Publish
+            </Button>
+          </motion.div>
         </div>
 
         {processList.map((process, i) => (
           <Card
             key={i}
+            index={i}
             icon={process.icon}
             type='process'
             name={process.processName}

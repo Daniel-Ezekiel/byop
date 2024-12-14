@@ -8,6 +8,7 @@ import {
   TrendingUpIcon,
   ZapIcon,
 } from "lucide-react";
+import * as motion from "motion/react-client";
 
 const featuresList = [
   {
@@ -53,16 +54,22 @@ function Features() {
     <section id='features' className='mt-20 mb-20 flex flex-col gap-8'>
       <SectionHeading title='features' tagline='why use byop?' />
 
-      <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'
+      >
         {featuresList.map((feature, i) => (
           <Card
             key={i}
+            index={i}
             icon={feature.icon}
             name={feature.name}
             description={feature.description}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

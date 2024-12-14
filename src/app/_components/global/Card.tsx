@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import * as motion from "motion/react-client";
 
 type cardTypes = {
+  index: number;
   icon: JSX.Element;
   type?: "process" | "feature";
   name: string;
@@ -10,6 +12,7 @@ type cardTypes = {
 };
 
 function Card({
+  index,
   icon,
   type = "feature",
   name,
@@ -17,7 +20,11 @@ function Card({
   isHidden,
 }: cardTypes) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, translateY: 10 }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 * index, type: "spring" }}
+      viewport={{ once: true }}
       className={`${isHidden ? "hidden" : "flex"} p-6 py-8 flex-col gap-2 ${
         type === "feature" ? "bg-zinc-900 border" : ""
       } border-gray-700 rounded-md`}
@@ -32,7 +39,7 @@ function Card({
         {name}
       </h4>
       <p className='lg:text-lg'>{description}</p>
-    </div>
+    </motion.div>
   );
 }
 
