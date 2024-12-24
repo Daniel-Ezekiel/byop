@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xsm: "540px",
+      },
       backgroundImage: {
         "gradient-linear-100":
           "linear-gradient(268deg, #1237F6 -22.24%, #09F4F4 57.33%)",
@@ -72,4 +75,3 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
-

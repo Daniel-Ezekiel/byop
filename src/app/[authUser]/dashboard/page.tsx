@@ -1,3 +1,4 @@
+import CategoryModal from "@/app/_components/dashboard/CategoryModal";
 import MainLayout from "@/app/_layouts/MainLayout";
 import ImgBuildPortfolio from "@/assets/build-portfolio.svg";
 import Image from "next/image";
@@ -29,6 +30,8 @@ function Dashboard() {
           />
         </div>
       </section>
+
+      <CategoryModal />
     </MainLayout>
   );
 }

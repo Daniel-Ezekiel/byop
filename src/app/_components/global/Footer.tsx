@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className='w-full mt-12 border-t py-4'>
+    <footer className='mt-12 border-t py-4 xl:ml-[18rem]'>
       <p className='text-sm font-[family-name:var(--font-general-sans-regular)] text-center text-gray-300'>
         © 2024{" "}
         <Link

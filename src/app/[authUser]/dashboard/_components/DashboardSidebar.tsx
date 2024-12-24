@@ -24,27 +24,27 @@ type SidebarLinkTypes = {
 const sidebarLinks: SidebarLinkTypes[] = [
   {
     name: "Dashboard",
-    href: "/dashboard",
+    href: "dashboard",
     icon: LayoutDashboardIcon,
   },
   {
     name: "Personal Information",
-    href: "/personal-information",
+    href: "personal-information",
     icon: IdCardIcon,
   },
   {
     name: "Projects",
-    href: "/projects",
+    href: "projects",
     icon: FolderOpenDotIcon,
   },
   {
     name: "Experience",
-    href: "/experience",
+    href: "experience",
     icon: BriefcaseIcon,
   },
   {
     name: "Education",
-    href: "/education",
+    href: "education",
     icon: University,
   },
 ];
