@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 
 function CategoryModal() {
   return (
-    <div className='fixed top-0 left-0 z-20 bg-black/70 min-h-screen w-screen backdrop-blur-md grid place-items-center overflow-y-scroll'>
-      <div className='p-4 py-6'>
-        <h2 className='m-6 text-center'>
+    <div className='fixed top-0 left-0 z-20 bg-black/70 min-h-screen w-screen backdrop-blur-md grid overflow-y-scroll'>
+      <div className='p-4'>
+        <h2 className='my-6 px-6 text-center'>
           Select the category that best describes what you do.
         </h2>
 
