@@ -1,53 +1,9 @@
 "use client";
+import { sidebarLinks } from "@/app/_utils.ts/sidebarLinks";
 import { Button } from "@/components/ui/button";
-import {
-  BriefcaseIcon,
-  FolderOpenDotIcon,
-  IdCardIcon,
-  LayoutDashboardIcon,
-  LogOutIcon,
-  LucideProps,
-  University,
-} from "lucide-react";
+import { LogOutIcon } from "lucide-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
-
-type SidebarLinkTypes = {
-  name: string;
-  href: string;
-  icon: ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-  >;
-};
-
-const sidebarLinks: SidebarLinkTypes[] = [
-  {
-    name: "Dashboard",
-    href: "dashboard",
-    icon: LayoutDashboardIcon,
-  },
-  {
-    name: "Personal Information",
-    href: "personal-information",
-    icon: IdCardIcon,
-  },
-  {
-    name: "Projects",
-    href: "projects",
-    icon: FolderOpenDotIcon,
-  },
-  {
-    name: "Experience",
-    href: "experience",
-    icon: BriefcaseIcon,
-  },
-  {
-    name: "Education",
-    href: "education",
-    icon: University,
-  },
-];
 
 function DashboardSidebar({ isMenuOpen }: { isMenuOpen: boolean }) {
   const { authUser } = useParams();

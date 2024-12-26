@@ -28,7 +28,7 @@ export default function MainLayout({
       {isDashboardPage && (
         <div className='mt-[4.56rem] xl:ml-[18rem]'>
           <DashboardSidebar isMenuOpen={isMenuOpen} />
-          <main className='min-h-[80dvh] px-6 grid justify-items-center gap-16 xl:px-8 '>
+          <main className='min-h-[80dvh] px-6 grid justify-items-center gap-6 xl:px-8 '>
             {children}
           </main>
         </div>
