@@ -1,7 +1,7 @@
 import CategoryModal from "@/app/_components/dashboard/CategoryModal";
 import MainLayout from "@/app/_layouts/MainLayout";
-import ImgBuildPortfolio from "@/assets/build-portfolio.svg";
 import Image from "next/image";
+import ImgBuildPortfolio from "@/assets/build-portfolio.svg";
 import NoDataImg from "@/assets/no-data.svg";
 import Link from "next/link";
 import { PlusIcon } from "lucide-react";
@@ -41,7 +41,7 @@ function Dashboard() {
           </h2>
 
           <Link
-            href=''
+            href='./personal-information'
             className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
           >
             Add <PlusIcon size={22} />
@@ -67,7 +67,7 @@ function Dashboard() {
           </h2>
 
           <Link
-            href=''
+            href='./about'
             className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
           >
             Add <PlusIcon size={22} />
@@ -91,7 +91,7 @@ function Dashboard() {
           </h2>
 
           <Link
-            href=''
+            href='./projects'
             className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
           >
             Add <PlusIcon size={22} />
@@ -115,7 +115,7 @@ function Dashboard() {
           </h2>
 
           <Link
-            href=''
+            href='./work-experience'
             className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
           >
             Add <PlusIcon size={22} />
@@ -141,7 +141,7 @@ function Dashboard() {
           </h2>
 
           <Link
-            href=''
+            href='./education-and-certification'
             className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
           >
             Add <PlusIcon size={22} />

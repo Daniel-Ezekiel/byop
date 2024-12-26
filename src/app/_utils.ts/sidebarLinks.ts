@@ -31,12 +31,12 @@ export const sidebarLinks: SidebarLinkTypes[] = [
   },
   {
     name: "Experience",
-    href: "experience",
+    href: "work-experience",
     icon: BriefcaseIcon,
   },
   {
     name: "Education",
-    href: "education",
+    href: "education-and-certification",
     icon: UniversityIcon,
   },
 ];

@@ -22,7 +22,7 @@ function DashboardSidebar({ isMenuOpen }: { isMenuOpen: boolean }) {
             <Link
               href={`/${authUser}/${link.href}`}
               className={`p-4 px-8 flex items-center justify-start gap-4 hover:bg-[hsl(var(--accent))] ${
-                currentPage === link.name.toLowerCase()
+                currentPage === link.href.toLowerCase()
                   ? "border-l-4 border-sky-600 bg-[hsl(var(--accent))] text-sky-400"
                   : ""
               }`}
