@@ -2,9 +2,9 @@ import CategoryModal from "@/app/_components/dashboard/CategoryModal";
 import MainLayout from "@/app/_layouts/MainLayout";
 import Image from "next/image";
 import ImgBuildPortfolio from "@/assets/build-portfolio.svg";
-import NoDataImg from "@/assets/no-data.svg";
 import Link from "next/link";
 import { PlusIcon } from "lucide-react";
+import NoDetails from "@/app/_components/dashboard/NoDetails";
 
 function Dashboard() {
   return (
@@ -48,16 +48,7 @@ function Dashboard() {
           </Link>
 
           <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <div className='flex flex-col items-center justify-center text-center'>
-              <Image
-                className='w-36 h-36'
-                src={NoDataImg}
-                alt='Nothing to see here'
-              />
-              <p className='w-60 mt-2'>
-                You have not added any personal information.
-              </p>
-            </div>
+            <NoDetails tag='Personal Information' />
           </div>
         </div>
 
@@ -74,14 +65,7 @@ function Dashboard() {
           </Link>
 
           <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <div className='flex flex-col items-center justify-center text-center'>
-              <Image
-                className='w-36 h-36'
-                src={NoDataImg}
-                alt='Nothing to see here'
-              />
-              <p className='w-60 mt-2'>No data about you yet.</p>
-            </div>
+            <NoDetails tag='About' />
           </div>
         </div>
 
@@ -98,14 +82,7 @@ function Dashboard() {
           </Link>
 
           <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <div className='flex flex-col items-center justify-center text-center'>
-              <Image
-                className='w-36 h-36'
-                src={NoDataImg}
-                alt='Nothing to see here'
-              />
-              <p className='w-60 mt-2'>Add project to see them here.</p>
-            </div>
+            <NoDetails tag='Projects' />
           </div>
         </div>
 
@@ -122,16 +99,7 @@ function Dashboard() {
           </Link>
 
           <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <div className='flex flex-col items-center justify-center text-center'>
-              <Image
-                className='w-36 h-36'
-                src={NoDataImg}
-                alt='Nothing to see here'
-              />
-              <p className='w-60 mt-2'>
-                Add your work/volunteering experience.
-              </p>
-            </div>
+            <NoDetails tag='Work experience' />
           </div>
         </div>
 
@@ -148,16 +116,7 @@ function Dashboard() {
           </Link>
 
           <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <div className='flex flex-col items-center justify-center text-center'>
-              <Image
-                className='w-36 h-36'
-                src={NoDataImg}
-                alt='Nothing to see here'
-              />
-              <p className='w-60 mt-2'>
-                Add your educational background and certifications.
-              </p>
-            </div>
+            <NoDetails tag='Education and Certification' />
           </div>
         </div>
       </section>
