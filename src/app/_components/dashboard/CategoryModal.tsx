@@ -7,7 +7,7 @@ function CategoryModal({ isOpen }: { isOpen: boolean }) {
         isOpen ? "block" : "hidden"
       } fixed top-0 left-0 z-20 bg-black/70 min-h-[100dvh] w-screen backdrop-blur-md grid place-items-center overflow-y-scroll`}
     >
-      <div className='p-4'>
+      <div className='max-w-[40rem] p-4'>
         <h2 className='mb-6 px-6 text-center'>
           Select the category that best describes what you do.
         </h2>
@@ -39,7 +39,7 @@ function CategoryModal({ isOpen }: { isOpen: boolean }) {
 
           <Button
             variant='outline'
-            className='bg-gradient-linear-300 hover:bg-gradient-linear-200 active:scale-95 transition-all ease-in-out duration-500'
+            className='col-span-full bg-gradient-linear-300 hover:bg-gradient-linear-200 active:scale-95 transition-all ease-in-out duration-500 md:min-w-[15rem] md:justify-self-center'
           >
             Confirm Selection
           </Button>

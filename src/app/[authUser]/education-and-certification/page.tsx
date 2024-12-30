@@ -5,7 +5,7 @@ function page() {
   return (
     <MainLayout isDashboardPage={true}>
       <Template
-        title='About'
+        title='Education and Certification'
         tagline='Showcase your education and certifications on your portfolio.'
         hasInfo={false}
       ></Template>

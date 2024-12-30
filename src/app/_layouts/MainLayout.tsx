@@ -42,7 +42,7 @@ export default function MainLayout({
         </div>
       )}
 
-      <Footer />
+      <Footer isDashboardPage={isDashboardPage} />
     </>
   );
 }
