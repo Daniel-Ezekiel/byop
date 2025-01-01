@@ -7,6 +7,7 @@ function page() {
       <Template
         title='Projects'
         tagline='Showcase your exciting projects on your portfolio.'
+        formInstructions='Fill out the form below to add your projects to your portfolio.'
         hasInfo={false}
       ></Template>
     </MainLayout>

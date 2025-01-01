@@ -7,6 +7,7 @@ function page() {
       <Template
         title='Work Experience'
         tagline='Share details about your previous experience on the job.'
+        formInstructions='Fill out the form below to add your work experience (if any) to your portfolio.'
         hasInfo={false}
       ></Template>
     </MainLayout>

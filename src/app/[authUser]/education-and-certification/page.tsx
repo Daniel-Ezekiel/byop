@@ -7,6 +7,7 @@ function page() {
       <Template
         title='Education and Certification'
         tagline='Showcase your education and certifications on your portfolio.'
+        formInstructions='Fill out the form below to add your education and certifications to your portfolio.'
         hasInfo={false}
       ></Template>
     </MainLayout>

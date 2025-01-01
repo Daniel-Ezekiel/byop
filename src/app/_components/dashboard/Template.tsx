@@ -9,11 +9,13 @@ import { useState } from "react";
 function Template({
   title,
   tagline,
+  formInstructions,
   hasInfo,
   children,
 }: {
   title: string;
   tagline: string;
+  formInstructions: string;
   hasInfo: boolean;
   children?: React.ReactNode;
 }) {
@@ -47,12 +49,12 @@ function Template({
       </>
 
       <FormModal
-        modalTitle='Personal Information'
-        modalInstructions='Add your details to update your personal information for your portfolio.'
+        modalTitle={title}
+        modalInstructions={formInstructions}
         isModalOpen={isModalOpen}
         closeModal={() => setIsModalOpen(!isModalOpen)}
       >
-        <PersonalInformationForm />
+        {title === "Personal Information" && <PersonalInformationForm />}
       </FormModal>
     </section>
   );
