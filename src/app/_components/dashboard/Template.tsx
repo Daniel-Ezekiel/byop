@@ -1,8 +1,10 @@
+"use client";
 import NoDetails from "@/app/_components/dashboard/NoDetails";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "lucide-react";
 import FormModal from "./FormModal";
 import PersonalInformationForm from "@/app/[authUser]/personal-information/_components/PersonalInformationForm";
+import { useState } from "react";
 
 function Template({
   title,
@@ -15,6 +17,8 @@ function Template({
   hasInfo: boolean;
   children?: React.ReactNode;
 }) {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
   return (
     <section className='w-full py-4 flex flex-col gap-6'>
       <div>
@@ -33,6 +37,7 @@ function Template({
             <Button
               variant='outline'
               className='mt-6 mx-auto h-fit flex flex-col gap-2 items-center justify-center'
+              onClick={() => setIsModalOpen(true)}
             >
               <PlusIcon className='text-sky-600' />
               Add {title}
@@ -44,6 +49,8 @@ function Template({
       <FormModal
         modalTitle='Personal Information'
         modalInstructions='Add your details to update your personal information for your portfolio.'
+        isModalOpen={isModalOpen}
+        closeModal={() => setIsModalOpen(!isModalOpen)}
       >
         <PersonalInformationForm />
       </FormModal>
