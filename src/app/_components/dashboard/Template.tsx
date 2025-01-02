@@ -5,6 +5,10 @@ import { PlusIcon } from "lucide-react";
 import FormModal from "./FormModal";
 import PersonalInformationForm from "@/app/[authUser]/personal-information/_components/PersonalInformationForm";
 import { useState } from "react";
+import AboutForm from "@/app/[authUser]/about/_components/AboutForm";
+import ProjectsForm from "@/app/[authUser]/projects/_components/ProjectsForm";
+import WorkExperienceForm from "@/app/[authUser]/work-experience/_components/WorkExperienceForm";
+import EducationAndCertificationForm from "@/app/[authUser]/education-and-certification/_components/EducationAndCertificationForm";
 
 function Template({
   title,
@@ -55,6 +59,12 @@ function Template({
         closeModal={() => setIsModalOpen(!isModalOpen)}
       >
         {title === "Personal Information" && <PersonalInformationForm />}
+        {title === "About" && <AboutForm />}
+        {title === "Projects" && <ProjectsForm />}
+        {title === "Work Experience" && <WorkExperienceForm />}
+        {title === "Education and Certification" && (
+          <EducationAndCertificationForm />
+        )}
       </FormModal>
     </section>
   );

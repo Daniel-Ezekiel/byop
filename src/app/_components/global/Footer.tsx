@@ -1,6 +1,9 @@
+import { computeDate } from "@/app/_utils.ts/computeDate";
 import Link from "next/link";
 
 function Footer({ isDashboardPage }: { isDashboardPage: boolean }) {
+  const currYear = computeDate().slice(computeDate().lastIndexOf(",") + 1);
+
   return (
     <footer
       className={`mt-12 border-t py-4 ${
@@ -8,7 +11,7 @@ function Footer({ isDashboardPage }: { isDashboardPage: boolean }) {
       }`}
     >
       <p className='text-sm font-[family-name:var(--font-general-sans-regular)] text-center text-gray-300'>
-        © 2024{" "}
+        © {currYear}{" "}
         <Link
           href={"https://github.com/daniel-ezekiel/byop/"}
           target='_blank'

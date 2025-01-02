@@ -1,14 +1,4 @@
-import React from "react";
-
-type inputTypes = {
-  type?: string;
-  label: string;
-  id: string;
-  name: string;
-  placeholder: string;
-  required?: boolean;
-  className?: string;
-};
+import { InputTypes } from "@/app/_types";
 
 function Input({
   type,
@@ -16,22 +6,45 @@ function Input({
   label,
   name,
   placeholder,
+  hasCheckbox = false,
+  checkboxId,
+  checkboxName,
   required = false,
   className = "col-span-full",
-}: inputTypes) {
+}: InputTypes) {
   return (
     <div className={`${className} grid gap-1`}>
       <label htmlFor={id} className='text-sm text-gray-300 sm:text-base'>
         {label}
       </label>
-      <input
-        type={type}
-        name={name}
-        id={id}
-        placeholder={placeholder}
-        className='w-full rounded-sm p-2 bg-transparent border border-gray-700 text-gray-300 placeholder:text-sm'
-        required={required}
-      />
+      {type !== "textarea" ? (
+        <>
+          <input
+            type={type}
+            name={name}
+            id={id}
+            placeholder={placeholder}
+            className='w-full rounded-sm p-2 bg-transparent border border-gray-700 text-gray-300 placeholder:text-sm'
+            required={required}
+          />
+          {hasCheckbox && (
+            <div className='flex gap-1'>
+              <input id={checkboxId} type='checkbox' name={checkboxId} />
+              <label htmlFor={checkboxId} className='text-sm'>
+                {checkboxName}
+              </label>
+            </div>
+          )}
+        </>
+      ) : (
+        <textarea
+          name={name}
+          id={id}
+          placeholder={placeholder}
+          className='w-full rounded-sm p-2 bg-transparent border border-gray-700 text-gray-300 placeholder:text-sm'
+          required={required}
+        />
+      )}
     </div>
   );
 }

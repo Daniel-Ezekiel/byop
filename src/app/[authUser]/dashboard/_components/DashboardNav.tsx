@@ -1,3 +1,4 @@
+import { computeDate } from "@/app/_utils.ts/computeDate";
 import { Button } from "@/components/ui/button";
 import { MenuIcon, User2Icon, XIcon } from "lucide-react";
 import Link from "next/link";
@@ -10,17 +11,6 @@ function DashboardNav({
   isMenuOpen: boolean;
   handleMenuToggle: () => void;
 }) {
-  const computeDate = () => {
-    const today = new Date();
-    const options: Intl.DateTimeFormatOptions = {
-      weekday: "long",
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    };
-
-    return today.toLocaleDateString("en-US", options);
-  };
   return (
     <header className='fixed top-0 left-0 min-h-[4.56rem] max-h-[10dvh] w-full bg-background border-b p-4 flex items-center shadow-2xl lg:p-4'>
       <nav className='relative w-full max-w-[122.5rem] mx-auto flex items-center space-between lg:grid lg:grid-cols-3'>

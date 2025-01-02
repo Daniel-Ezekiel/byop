@@ -8,3 +8,16 @@ type SidebarLinkTypes = {
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
 };
+
+type InputTypes = {
+  type?: string;
+  label: string;
+  id: string;
+  name: string;
+  placeholder: string;
+  hasCheckbox?: boolean;
+  checkboxId?: string;
+  checkboxName?: string;
+  required?: boolean;
+  className?: string;
+};
