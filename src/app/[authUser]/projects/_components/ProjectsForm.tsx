@@ -23,7 +23,7 @@ function ProjectsForm() {
 
       <Input
         id='projectImages'
-        type='text'
+        type='file'
         label='Project Images*'
         name='projectImages'
         placeholder='Upload images that showcases what your project looks like.'
