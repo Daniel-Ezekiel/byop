@@ -27,11 +27,16 @@ function Template({
 
   return (
     <section className='w-full py-4 flex flex-col gap-6'>
-      <div>
-        <h1 className='text-2xl font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
-          {title}
-        </h1>
-        <p>{tagline}</p>
+      <div className='w-full flex gap-8 items-center justify-between'>
+        <div>
+          <h1 className='text-2xl font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent'>
+            {title}
+          </h1>
+          <p>{tagline}</p>
+        </div>
+        {hasInfo && (
+          <Button onClick={() => setIsModalOpen(true)}>Update {title}</Button>
+        )}
       </div>
 
       <>

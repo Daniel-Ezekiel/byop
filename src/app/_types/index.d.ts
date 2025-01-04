@@ -21,3 +21,8 @@ type InputTypes = {
   required?: boolean;
   className?: string;
 };
+
+type InfoCardTypes = {
+  cardTitle: string;
+  cardContent: string;
+};

@@ -4,11 +4,41 @@ function AboutForm() {
   return (
     <>
       <Input
+        id='fullName'
+        type='text'
+        label='Full Name*'
+        name='fullName'
+        placeholder='Enter your full name, e.g. John Doe'
+        required={true}
+        className='col-span-1'
+      />
+
+      <Input
+        id='email'
+        type='email'
+        label='Email*'
+        name='email'
+        placeholder='Enter your email address'
+        required={true}
+        className='col-span-1'
+      />
+
+      <Input
         id='jobTitle'
         type='text'
         label='Job Title*'
         name='jobTitle'
         placeholder='Enter your job title. e.g Frontend Developer'
+        required={true}
+        className='col-span-1'
+      />
+
+      <Input
+        id='location'
+        type='text'
+        label='Location*'
+        name='location'
+        placeholder='Enter your location (state only)'
         required={true}
         className='col-span-1'
       />
@@ -20,13 +50,12 @@ function AboutForm() {
         name='tagline'
         placeholder='Add a short phrase for your tagline'
         required={true}
-        className='col-span-1'
       />
 
       <Input
         id='shortSummary'
         type='textarea'
-        label='ShortSummary*'
+        label='Short Summary*'
         name='shortSummary'
         placeholder='Summarize what you do in a short sentence.'
         required={true}
@@ -46,7 +75,7 @@ function AboutForm() {
         type='text'
         label='Skills, Tools and Technologies*'
         name='tools-and-technologies'
-        placeholder='Add your skils, tools and technologies. e.g React, Next.js, Tailwind, etc.'
+        placeholder='Add your skills, tools and technologies. e.g React, Next.js, Tailwind, etc.'
         required={true}
       />
     </>

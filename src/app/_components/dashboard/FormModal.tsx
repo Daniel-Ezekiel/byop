@@ -27,8 +27,8 @@ function FormModal({
           className={`fixed top-0 right-0
         } z-20 bg-black/70 w-screen backdrop-blur-md overflow-y-auto`}
         >
-          <div className='min-h-[100dvh] p-4 flex flex-col justify-center gap-20 lg:w-1/2 lg:ml-auto lg:px-12 lg:bg-slate-900'>
-            <div>
+          <div className='min-h-[100dvh] p-4 flex flex-col justify-center gap-10 lg:w-1/2 lg:ml-auto lg:px-12 lg:bg-slate-900'>
+            <div className='pt-8'>
               <h2 className='font-[family-name:var(--font-general-sans-bold)] text-2xl bg-gradient-linear-200 bg-clip-text text-transparent sm:text-3xl'>
                 {modalTitle}
               </h2>
@@ -47,7 +47,7 @@ function FormModal({
 
             <Button
               variant='ghost'
-              className='fixed top-8 right-8 self-end border-2 border-sky-900 rounded-full'
+              className='fixed top-6 right-8 self-end border-2 border-sky-900 rounded-full'
               onClick={closeModal}
             >
               <XIcon />
