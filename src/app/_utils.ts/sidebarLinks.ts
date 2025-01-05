@@ -1,7 +1,7 @@
 import {
   BriefcaseIcon,
   FolderOpenDotIcon,
-  IdCardIcon,
+  // IdCardIcon,
   InfoIcon,
   LayoutDashboardIcon,
   UniversityIcon,
@@ -14,11 +14,11 @@ export const sidebarLinks: SidebarLinkTypes[] = [
     href: "dashboard",
     icon: LayoutDashboardIcon,
   },
-  {
-    name: "Personal Information",
-    href: "personal-information",
-    icon: IdCardIcon,
-  },
+  // {
+  //   name: "Personal Information",
+  //   href: "personal-information",
+  //   icon: IdCardIcon,
+  // },
   {
     name: "About",
     href: "about",
