@@ -25,17 +25,23 @@ function FormModal({
           animate={{ opacity: 1, translateX: 0 }}
           exit={{ opacity: 0, translateX: "100dvw" }}
           className={`fixed top-0 right-0
-        } z-20 bg-black/70 w-screen backdrop-blur-md overflow-y-auto`}
+        } z-20 bg-black/70 w-screen backdrop-blur-md`}
         >
-          <div className='min-h-[100dvh] p-4 flex flex-col justify-center gap-10 lg:w-1/2 lg:ml-auto lg:px-12 lg:bg-slate-900'>
-            <div className='pt-8'>
+          <div className='min-h-[100dvh] flex flex-col justify-center gap-10 lg:w-1/2 lg:ml-auto lg:px-12 lg:bg-slate-900'>
+            <div className='p-4 pt-8 pb-0'>
               <h2 className='font-[family-name:var(--font-general-sans-bold)] text-2xl bg-gradient-linear-200 bg-clip-text text-transparent sm:text-3xl'>
                 {modalTitle}
               </h2>
               <p>{modalInstructions}</p>
+              <small className='text-slate-400'>
+                {modalTitle === "About" && "Scroll to see all form details"}
+              </small>
             </div>
 
-            <form action='' className='grid gap-4 md:grid-cols-2'>
+            <form
+              action=''
+              className='grid gap-4 p-4 max-h-[24rem] overflow-y-scroll md:grid-cols-2 xl:max-h-full xl:overflow-y-auto'
+            >
               {children}
               <Button
                 variant='outline'
