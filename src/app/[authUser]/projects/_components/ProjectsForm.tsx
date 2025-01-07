@@ -10,15 +10,29 @@ function ProjectsForm() {
         name='projectTitle'
         placeholder='Enter your project name'
         required={true}
+        hasCheckbox={true}
+        checkboxId='isFeatured'
+        checkboxName='Tag as Featured Project'
       />
 
       <Input
-        id='description'
+        id='summary'
         type='textarea'
-        label='Project Description*'
-        name='description'
-        placeholder='Share more details about your project and what you built.'
+        label='Project Summary*'
+        name='summary'
+        placeholder='Share a summary of your project and what you built.'
         required={true}
+        className='col-span-1'
+      />
+
+      <Input
+        id='overview'
+        type='textarea'
+        label='Project Overview*'
+        name='overview'
+        placeholder='Share the details about your project, what you learned while building it.'
+        required={true}
+        className='col-span-1'
       />
 
       <Input
@@ -28,7 +42,6 @@ function ProjectsForm() {
         name='projectImages'
         placeholder='Upload images that showcases what your project looks like.'
         required={true}
-        className='col-span-1'
       />
 
       <Input
@@ -38,7 +51,6 @@ function ProjectsForm() {
         name='projectLink'
         placeholder='Add links to your project'
         required={true}
-        className='col-span-1'
       />
 
       <Input

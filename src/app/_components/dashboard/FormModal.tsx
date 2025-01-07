@@ -35,12 +35,14 @@ function FormModal({
               <p>{modalInstructions}</p>
               <small className='text-slate-400'>
                 {modalTitle === "About" && "Scroll to see all form details"}
+                {modalTitle === "Projects" &&
+                  "Select your best 3 projects as your featured projects."}
               </small>
             </div>
 
             <form
               action=''
-              className='grid gap-4 p-4 max-h-[24rem] overflow-y-scroll md:grid-cols-2 xl:max-h-full xl:overflow-y-auto'
+              className='grid gap-4 p-4 max-h-[24rem] overflow-y-auto md:grid-cols-2 xl:max-h-[40rem] xl:overflow-y-auto'
             >
               {children}
               <Button
