@@ -18,7 +18,7 @@ function page() {
               <Button variant='ghost' className='p-2'>
                 <PencilIcon />
               </Button>
-              <Button variant='ghost' className='p-0'>
+              <Button variant='ghost' className='p-2'>
                 <TrashIcon />
               </Button>
             </div>
@@ -48,7 +48,7 @@ function page() {
               <Button variant='ghost' className='p-2'>
                 <PencilIcon />
               </Button>
-              <Button variant='ghost' className='p-0'>
+              <Button variant='ghost' className='p-2'>
                 <TrashIcon />
               </Button>
             </div>
@@ -78,7 +78,7 @@ function page() {
               <Button variant='ghost' className='p-2'>
                 <PencilIcon />
               </Button>
-              <Button variant='ghost' className='p-0'>
+              <Button variant='ghost' className='p-2'>
                 <TrashIcon />
               </Button>
             </div>
@@ -108,7 +108,7 @@ function page() {
               <Button variant='ghost' className='p-2'>
                 <PencilIcon />
               </Button>
-              <Button variant='ghost' className='p-0'>
+              <Button variant='ghost' className='p-2'>
                 <TrashIcon />
               </Button>
             </div>
@@ -138,7 +138,7 @@ function page() {
               <Button variant='ghost' className='p-2'>
                 <PencilIcon />
               </Button>
-              <Button variant='ghost' className='p-0'>
+              <Button variant='ghost' className='p-2'>
                 <TrashIcon />
               </Button>
             </div>
@@ -168,7 +168,7 @@ function page() {
               <Button variant='ghost' className='p-2'>
                 <PencilIcon />
               </Button>
-              <Button variant='ghost' className='p-0'>
+              <Button variant='ghost' className='p-2'>
                 <TrashIcon />
               </Button>
             </div>

@@ -35,7 +35,9 @@ function Template({
           <p>{tagline}</p>
         </div>
         {hasInfo && (
-          <Button onClick={() => setIsModalOpen(true)}>Update {title}</Button>
+          <Button onClick={() => setIsModalOpen(true)}>
+            {`${title === "Projects" ? "Add" : "Edit"}`} {title}
+          </Button>
         )}
       </div>
 
