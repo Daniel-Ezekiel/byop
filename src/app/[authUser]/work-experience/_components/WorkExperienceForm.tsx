@@ -10,25 +10,39 @@ function WorkExperienceForm() {
         name='jobTitle'
         placeholder='Enter the job title for this role'
         required={true}
+        className='col-span-1'
       />
 
       <Input
-        id='timeline-start'
+        id='companyName'
         type='text'
-        label='Job Timeline Start*'
-        name='timeline-start'
+        label='Company*'
+        name='companyName'
+        placeholder='Enter the company name for this role'
+        required={true}
+        className='col-span-1'
+      />
+
+      <Input
+        id='start-date'
+        type='text'
+        label='Job Start Date*'
+        name='start-date'
         placeholder='Enter your job start date. (MM/YYYY)'
         required={true}
         className='col-span-1'
       />
 
       <Input
-        id='timeline-end'
+        id='end-date'
         type='text'
-        label='Job Timeline End*'
-        name='timeline-end'
+        label='Job End Date*'
+        name='end-date'
         placeholder='Enter your job end date. (MM/YYYY)'
         required={true}
+        hasCheckbox={true}
+        checkboxId='isCurrentJob'
+        checkboxName='I currently work here'
         className='col-span-1'
       />
 

@@ -13,7 +13,7 @@ function Input({
   className = "col-span-full",
 }: InputTypes) {
   return (
-    <div className={`${className} grid gap-1`}>
+    <div className={`${className} flex flex-col gap-1`}>
       <label htmlFor={id} className='text-sm text-gray-300 sm:text-base'>
         {label}
       </label>
