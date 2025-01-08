@@ -4,31 +4,15 @@ function EducationAndCertificationForm() {
   return (
     <>
       <Input
-        id='courseTitle'
+        id='certificationTitle'
         type='text'
-        label='Course Title*'
-        name='courseTitle'
-        placeholder='Enter the course title for this degree/certification'
+        label='Degree/Certification Title*'
+        name='certificationTitle'
+        placeholder='Enter the title of your degree/certification.'
         required={true}
-      />
-
-      <Input
-        id='timeline-start'
-        type='text'
-        label='Education Timeline Start*'
-        name='timeline-start'
-        placeholder='Enter your study start date. (MM/YYYY)'
-        required={true}
-        className='col-span-1'
-      />
-
-      <Input
-        id='timeline-end'
-        type='text'
-        label='Education Timeline End*'
-        name='timeline-end'
-        placeholder='Enter your study end date. (MM/YYYY)'
-        required={true}
+        hasCheckbox={true}
+        checkboxId='isDegree'
+        checkboxName='Degree Programme?'
         className='col-span-1'
       />
 
@@ -38,10 +22,28 @@ function EducationAndCertificationForm() {
         label='Institution or Issuer name*'
         name='issuer'
         placeholder='Enter name of institution/platform that issues the degree/certification.'
-        hasCheckbox={true}
-        checkboxId='isDegree'
-        checkboxName='Degree Programme?'
         required={true}
+        className='col-span-1'
+      />
+
+      <Input
+        id='start-date'
+        type='text'
+        label='Start Date*'
+        name='start-date'
+        placeholder='Enter your study start date. (MM/YYYY)'
+        required={true}
+        className='col-span-1'
+      />
+
+      <Input
+        id='end-date'
+        type='text'
+        label='End Date*'
+        name='end-date'
+        placeholder='Enter your study end date. (MM/YYYY)'
+        required={true}
+        className='col-span-1'
       />
 
       <Input

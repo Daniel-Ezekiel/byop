@@ -36,7 +36,7 @@ function Template({
         </div>
         {hasInfo && (
           <Button onClick={() => setIsModalOpen(true)}>
-            {`${title === "Projects" ? "Add" : "Edit"}`} {title}
+            {`${title !== "About" ? "Add" : "Edit"}`} {title}
           </Button>
         )}
       </div>
