@@ -1,11 +1,7 @@
+import { sectionHeadingProps } from "@/app/_types";
 import * as motion from "motion/react-client";
 
-type sectionHeadingTypes = {
-  title: string;
-  tagline: string;
-};
-
-function SectionHeading({ title, tagline }: sectionHeadingTypes) {
+function SectionHeading({ title, tagline }: sectionHeadingProps) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

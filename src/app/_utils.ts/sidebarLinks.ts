@@ -6,9 +6,9 @@ import {
   LayoutDashboardIcon,
   UniversityIcon,
 } from "lucide-react";
-import { SidebarLinkTypes } from "../_types";
+import { SidebarLinkProps } from "../_types";
 
-export const sidebarLinks: SidebarLinkTypes[] = [
+export const sidebarLinks: SidebarLinkProps[] = [
   {
     name: "Dashboard",
     href: "dashboard",

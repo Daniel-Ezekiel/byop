@@ -1,4 +1,4 @@
-import { InputTypes } from "@/app/_types";
+import { InputProps } from "@/app/_types";
 
 function Input({
   type,
@@ -11,7 +11,7 @@ function Input({
   checkboxName,
   required = false,
   className = "col-span-full",
-}: InputTypes) {
+}: InputProps) {
   return (
     <div className={`${className} flex flex-col gap-1`}>
       <label htmlFor={id} className='text-sm text-gray-300 sm:text-base'>

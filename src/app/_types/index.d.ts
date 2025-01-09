@@ -1,15 +1,25 @@
 import { LucideProps } from "lucide-react";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 
-type SidebarLinkTypes = {
+interface SidebarLinkProps {
   name: string;
   href: string;
   icon: ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
   >;
-};
+}
 
-type InputTypes = {
+interface cardProps {
+  index: number;
+  icon: JSX.Element;
+  type?: "process" | "feature";
+  name: string;
+  description: string;
+  isHidden?: boolean;
+  customCSS?: string;
+}
+
+interface InputProps {
   type?: string;
   label: string;
   id: string;
@@ -20,9 +30,26 @@ type InputTypes = {
   checkboxName?: string;
   required?: boolean;
   className?: string;
-};
+}
 
-type InfoCardTypes = {
+interface sectionHeadingProps {
+  title: string;
+  tagline: string;
+}
+
+interface InfoCardProps {
   cardTitle: string;
   cardContent: string;
-};
+}
+
+interface WorkExperienceCardProps {
+  position: string;
+  company: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+  responsibilities: string[];
+  className?: string;
+  // onEdit: () => void;
+  // onDelete: () => void;
+}

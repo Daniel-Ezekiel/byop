@@ -1,15 +1,6 @@
+import { cardProps } from "@/app/_types";
 import { Button } from "@/components/ui/button";
 import * as motion from "motion/react-client";
-
-type cardTypes = {
-  index: number;
-  icon: JSX.Element;
-  type?: "process" | "feature";
-  name: string;
-  description: string;
-  isHidden?: boolean;
-  customCSS?: string;
-};
 
 function Card({
   index,
@@ -18,7 +9,7 @@ function Card({
   name,
   description,
   isHidden,
-}: cardTypes) {
+}: cardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, translateY: 10 }}

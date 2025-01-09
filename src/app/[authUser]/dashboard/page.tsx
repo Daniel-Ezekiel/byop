@@ -2,9 +2,11 @@ import CategoryModal from "@/app/_components/dashboard/CategoryModal";
 import MainLayout from "@/app/_layouts/MainLayout";
 import Image from "next/image";
 import ImgBuildPortfolio from "@/assets/build-portfolio.svg";
-import Link from "next/link";
-import { PlusIcon } from "lucide-react";
-import NoDetails from "@/app/_components/dashboard/NoDetails";
+import DetailsCard from "./_components/DetailsCard";
+import InfoCard from "@/app/_components/dashboard/InfoCard";
+import ProjectCard from "../projects/_components/ProjectCard";
+import WorkExperienceCard from "../work-experience/_components/WorkExperienceCard";
+import EducationAndCertificationCard from "../education-and-certification/_components/EducationAndCertificationCard";
 
 function Dashboard() {
   return (
@@ -34,91 +36,175 @@ function Dashboard() {
         </div>
       </section>
 
-      <section className='w-full grid items-stretch gap-6 md:grid-cols-2'>
-        <div className='min-w-[15rem] col-span-full grid grid-cols-[1fr_auto] items-start p-4 border rounded-md bg-slate-900'>
-          <h2 className='mr-4 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
-            Personal Information
-          </h2>
+      <section className='w-full grid items-stretch gap-6'>
+        <DetailsCard
+          data={true}
+          title='About'
+          tag='Personal Information'
+          url='about'
+          className='col-span-full'
+        >
+          <InfoCard cardTitle='Full Name' cardContent='John Doe' />
+          <InfoCard cardTitle='Email' cardContent='realjohndoe@example.com' />
+          <InfoCard cardTitle='Location' cardContent='Lagos, Nigeria' />
+          <InfoCard cardTitle='Job Title' cardContent='Software Engineer' />
+          <InfoCard
+            cardTitle='Tagline'
+            cardContent='I build optimised, accessible and scalable web experiences'
+          />
+          <InfoCard
+            cardTitle='Skills, Tools and Technologies'
+            cardContent='React, Next.js, Tailwind, etc.'
+          />
+          <InfoCard
+            cardTitle='Short Summary'
+            cardContent='As a Software Engineer, I specialize in passionately building (and occasionally designing) characteristic web solutions and experiences for individuals and organizations with taste.'
+          />
+          <InfoCard
+            cardTitle='About'
+            cardContent={`
+                Hi! My name is Daniel and I enjoy building things on the web. This interest in Web development began during the lockdown period after I completed by Industrial Training in Aircraft Maintenance Engineering when I though about how some processes could be made easier just by building solutions on the web for them.
+                Over time, I have had the privilege of working on multiple projects, through which the skills I have acquired and my solution-oriented personality are used to deliver efficient, accessible, creative solutions and experiences to one and all.
+                I have a Bachelor's degree in Mechanical Engineering and for my final thesis, I completed a published research paper during my undergraduate program titled 'Geometrical Attenuation of Shockwaves using rigid obstacle matrices'.
+                Outside my regular developer routine, I enjoy listening to music, gaming or reading about space and technology.`}
+          />
+        </DetailsCard>
 
-          <Link
-            href='./personal-information'
-            className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
-          >
-            Add <PlusIcon size={22} />
-          </Link>
+        <DetailsCard
+          data={true}
+          title='Projects'
+          tag='Projects'
+          url='projects'
+          className='col-span-full xl:col-span-1'
+        >
+          <ProjectCard
+            projectName='Project One'
+            projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
+            projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+          />
+          <ProjectCard
+            projectName='Project One'
+            projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
+            projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+          />
+          <ProjectCard
+            projectName='Project One'
+            projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
+            projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+          />
+          <ProjectCard
+            projectName='Project One'
+            projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
+            projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+          />
+        </DetailsCard>
 
-          <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <NoDetails tag='Personal Information' />
-          </div>
-        </div>
+        <DetailsCard
+          data={true}
+          title='Work Experience'
+          tag='Work Experience'
+          url='work-experience'
+          className='col-span-full xl:col-span-1'
+        >
+          <WorkExperienceCard
+            position='Frontend Developer'
+            company='Oracle'
+            startDate='Mar. 2025'
+            endDate='Present'
+            location='Hamburg, Germany (Remote)'
+            responsibilities={[
+              `Collaborated with designers and backend developers to create
+                modern, responsive web applications using HTML, CSS, and
+                JavaScript, emphasizing user-centric design principles`,
+              `Implemented robust SEO strategies, including keyword
+                optimization and semantic HTML, achieving a 15% increase in site
+                visits and first-page search engine rankings.`,
+              `Integrated an audio-streaming API, leveraging caching techniques
+                to reduce latency, increasing user session duration by 38%.`,
+            ]}
+          />
+          <WorkExperienceCard
+            position='Frontend Developer'
+            company='Oracle'
+            startDate='Mar. 2025'
+            endDate='Present'
+            location='Hamburg, Germany (Remote)'
+            responsibilities={[
+              `Collaborated with designers and backend developers to create
+              modern, responsive web applications using HTML, CSS, and
+              JavaScript, emphasizing user-centric design principles`,
+              `Implemented robust SEO strategies, including keyword
+              optimization and semantic HTML, achieving a 15% increase in site
+              visits and first-page search engine rankings.`,
+              `Integrated an audio-streaming API, leveraging caching techniques
+              to reduce latency, increasing user session duration by 38%.`,
+            ]}
+          />
+          <WorkExperienceCard
+            position='Frontend Developer'
+            company='Oracle'
+            startDate='Mar. 2025'
+            endDate='Present'
+            location='Hamburg, Germany (Remote)'
+            responsibilities={[
+              `Collaborated with designers and backend developers to create
+            modern, responsive web applications using HTML, CSS, and
+            JavaScript, emphasizing user-centric design principles`,
+              `Implemented robust SEO strategies, including keyword
+            optimization and semantic HTML, achieving a 15% increase in site
+            visits and first-page search engine rankings.`,
+              `Integrated an audio-streaming API, leveraging caching techniques
+            to reduce latency, increasing user session duration by 38%.`,
+            ]}
+          />
+          <WorkExperienceCard
+            position='Frontend Developer'
+            company='Oracle'
+            startDate='Mar. 2025'
+            endDate='Present'
+            location='Hamburg, Germany (Remote)'
+            responsibilities={[
+              `Collaborated with designers and backend developers to create
+          modern, responsive web applications using HTML, CSS, and
+          JavaScript, emphasizing user-centric design principles`,
+              `Implemented robust SEO strategies, including keyword
+          optimization and semantic HTML, achieving a 15% increase in site
+          visits and first-page search engine rankings.`,
+              `Integrated an audio-streaming API, leveraging caching techniques
+          to reduce latency, increasing user session duration by 38%.`,
+            ]}
+          />
+        </DetailsCard>
 
-        <div className='min-w-[15rem] grid grid-cols-[1fr_auto] items-start p-4 border rounded-md bg-slate-900'>
-          <h2 className='mr-4 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
-            About
-          </h2>
-
-          <Link
-            href='./about'
-            className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
-          >
-            Add <PlusIcon size={22} />
-          </Link>
-
-          <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <NoDetails tag='About' />
-          </div>
-        </div>
-
-        <div className='min-w-[15rem] grid grid-cols-[1fr_auto] items-start p-4 border rounded-md bg-slate-900'>
-          <h2 className='mr-4 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
-            Projects
-          </h2>
-
-          <Link
-            href='./projects'
-            className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
-          >
-            Add <PlusIcon size={22} />
-          </Link>
-
-          <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <NoDetails tag='Projects' />
-          </div>
-        </div>
-
-        <div className='min-w-[15rem] grid grid-cols-[1fr_auto] items-start p-4 border rounded-md bg-slate-900'>
-          <h2 className='mr-4 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
-            Work Experience
-          </h2>
-
-          <Link
-            href='./work-experience'
-            className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
-          >
-            Add <PlusIcon size={22} />
-          </Link>
-
-          <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <NoDetails tag='Work experience' />
-          </div>
-        </div>
-
-        <div className='min-w-[15rem] grid grid-cols-[1fr_auto] items-start p-4 border rounded-md bg-slate-900'>
-          <h2 className='mr-4 font-[family-name:var(--font-general-sans-bold)] bg-gradient-linear-100 bg-clip-text text-transparent text-lg'>
-            Education
-          </h2>
-
-          <Link
-            href='./education-and-certification'
-            className='flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
-          >
-            Add <PlusIcon size={22} />
-          </Link>
-
-          <div className='col-span-full my-8 flex flex-col items-center justify-center gap-2'>
-            <NoDetails tag='Education and Certification' />
-          </div>
-        </div>
+        <DetailsCard
+          data={true}
+          title='Education and Certification'
+          tag='Education and Certification'
+          url='education-and-certification'
+          className='pb-8 items-stretch'
+        >
+          <EducationAndCertificationCard
+            certTitle='BSc. Mechanical Engineering'
+            startDate='Sept. 2015'
+            endDate='Jan. 2020'
+            issuer='Obafemi Awolowo University, Ile-Ife'
+            showButtons={false}
+          />
+          <EducationAndCertificationCard
+            certTitle='NITDA Associate Frontend Developer'
+            startDate=''
+            endDate='Sept. 2023'
+            issuer='Coursera'
+            showButtons={false}
+          />
+          <EducationAndCertificationCard
+            certTitle='BSc. Mechanical Engineering'
+            startDate='Sept. 2015'
+            endDate='Jan. 2020'
+            issuer='Obafemi Awolowo University, Ile-Ife'
+            showButtons={false}
+          />
+        </DetailsCard>
       </section>
 
       <CategoryModal isOpen={false} />

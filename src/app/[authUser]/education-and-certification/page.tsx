@@ -1,7 +1,6 @@
 import Template from "@/app/_components/dashboard/Template";
 import MainLayout from "@/app/_layouts/MainLayout";
-import { Button } from "@/components/ui/button";
-import { EditIcon, TrashIcon } from "lucide-react";
+import EducationAndCertificationCard from "./_components/EducationAndCertificationCard";
 
 function page() {
   return (
@@ -13,45 +12,21 @@ function page() {
         hasInfo={true}
       >
         <div className='mt-4 grid grid-cols-[repeat(auto-fill,_minmax(18.75rem,_1fr))] gap-8'>
-          <div className='grid grid-cols-2 gap-2 bg-slate-900 border rounded-md p-6'>
-            {true && (
-              <div className='col-span-full justify-self-end flex gap-2 mb-4'>
-                <Button variant='ghost' className='p-2'>
-                  <EditIcon />
-                </Button>
-                <Button variant='ghost' className='p-2'>
-                  <TrashIcon />
-                </Button>
-              </div>
-            )}
-            <h2 className='font-[family-name:var(--font-general-sans-semibold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
-              BSc. Mechanical Engineering
-            </h2>
-            <span className='text-sm justify-self-end'>
-              Spet. 2015 - Jan. 2020
-            </span>
-            <span className='col-span-full text-sm'>
-              Obafemi Awolowo University, Ile-Ife
-            </span>
-          </div>
+          <EducationAndCertificationCard
+            certTitle='BSc. Mechanical Engineering'
+            startDate='Sept. 2015'
+            endDate='Jan. 2020'
+            issuer='Obafemi Awolowo University, Ile-Ife'
+            showButtons={false}
+          />
 
-          <div className='grid grid-cols-2 gap-2 bg-slate-900 border rounded-md p-6'>
-            {true && (
-              <div className='col-span-full justify-self-end flex gap-2 mb-4'>
-                <Button variant='ghost' className='p-2'>
-                  <EditIcon />
-                </Button>
-                <Button variant='ghost' className='p-2'>
-                  <TrashIcon />
-                </Button>
-              </div>
-            )}
-            <h2 className='font-[family-name:var(--font-general-sans-semibold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
-              NITDA Associate Frontend Developer
-            </h2>
-            <span className='text-sm justify-self-end'>Sept. 2023</span>
-            <span className='col-span-full text-sm'>Coursera</span>
-          </div>
+          <EducationAndCertificationCard
+            certTitle='NITDA Associate Frontend Developer'
+            startDate=''
+            endDate='Sept. 2023'
+            issuer='Coursera'
+            showButtons={false}
+          />
         </div>
       </Template>
     </MainLayout>
