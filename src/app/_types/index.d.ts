@@ -38,6 +38,7 @@ interface sectionHeadingProps {
 }
 
 interface InfoCardProps {
+  className?: string;
   cardTitle: string;
   cardContent: string;
 }

@@ -36,13 +36,14 @@ function Dashboard() {
         </div>
       </section>
 
-      <section className='w-full grid items-stretch gap-6'>
+      <section className='w-full grid grid-cols-2 items-stretch gap-6'>
         <DetailsCard
           data={true}
           title='About'
           tag='Personal Information'
           url='about'
           className='col-span-full'
+          dataContainerClassName='md:grid-cols-2 lg:grid-cols-3'
         >
           <InfoCard cardTitle='Full Name' cardContent='John Doe' />
           <InfoCard cardTitle='Email' cardContent='realjohndoe@example.com' />
@@ -58,9 +59,11 @@ function Dashboard() {
           />
           <InfoCard
             cardTitle='Short Summary'
+            className='col-span-2'
             cardContent='As a Software Engineer, I specialize in passionately building (and occasionally designing) characteristic web solutions and experiences for individuals and organizations with taste.'
           />
           <InfoCard
+            className='md:col-span-full xl:col-span-2'
             cardTitle='About'
             cardContent={`
                 Hi! My name is Daniel and I enjoy building things on the web. This interest in Web development began during the lockdown period after I completed by Industrial Training in Aircraft Maintenance Engineering when I though about how some processes could be made easier just by building solutions on the web for them.
@@ -75,7 +78,8 @@ function Dashboard() {
           title='Projects'
           tag='Projects'
           url='projects'
-          className='col-span-full xl:col-span-1'
+          className='col-span-full 2xl:col-span-1'
+          dataContainerClassName='sm:grid-cols-2'
         >
           <ProjectCard
             projectName='Project One'
@@ -108,7 +112,7 @@ function Dashboard() {
           title='Work Experience'
           tag='Work Experience'
           url='work-experience'
-          className='col-span-full xl:col-span-1'
+          className='col-span-full 2xl:col-span-1'
         >
           <WorkExperienceCard
             position='Frontend Developer'
@@ -189,7 +193,8 @@ function Dashboard() {
           title='Education and Certification'
           tag='Education and Certification'
           url='education-and-certification'
-          className='pb-8 items-stretch'
+          className='pb-8 items-stretch col-span-full'
+          dataContainerClassName='md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3'
         >
           <EducationAndCertificationCard
             certTitle='BSc. Mechanical Engineering'

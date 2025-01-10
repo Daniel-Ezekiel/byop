@@ -8,6 +8,7 @@ function DetailsCard({
   tag,
   url,
   className = "bg-slate-900",
+  dataContainerClassName,
   children,
 }: {
   data?: [] | boolean;
@@ -15,6 +16,7 @@ function DetailsCard({
   tag: string;
   url: string;
   className?: string;
+  dataContainerClassName?: string;
   children: React.ReactNode;
 }) {
   return (
@@ -34,11 +36,7 @@ function DetailsCard({
       </Link>
 
       <div
-        className={`col-span-full mt-4 grid ${
-          title !== "Work Experience"
-            ? "grid-cols-[repeat(auto-fill,_minmax(18.75rem,_1fr))]"
-            : "grid-cols-2"
-        } items-start justify-center gap-x-6 gap-y-4 lg:gap-y-8`}
+        className={`col-span-full mt-4 grid items-start justify-center gap-x-6 gap-y-4 lg:gap-y-8 ${dataContainerClassName}`}
       >
         <>
           {data && children}
