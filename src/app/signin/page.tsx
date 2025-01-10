@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import MainLayout from "../_layouts/MainLayout";
 import { LinkedinIcon, LogInIcon } from "lucide-react";
@@ -6,8 +7,11 @@ import { Google } from "iconsax-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Input from "../_components/global/Input";
 import * as motion from "motion/react-client";
+import { useRouter } from "next/navigation";
 
 export default function SignIn() {
+  const router = useRouter();
+
   return (
     <MainLayout>
       <div className='min-h-[85dvh] py-20 flex flex-col justify-center'>
@@ -76,7 +80,10 @@ export default function SignIn() {
             </Link>
           </div>
 
-          <Button className='mt-4 bg-gradient-linear-200 text-white md:py-4 md:text-base'>
+          <Button
+            className='mt-4 bg-gradient-linear-200 text-white md:py-4 md:text-base'
+            onClick={() => router.push("/daniel-ezekiel/dashboard")}
+          >
             <LogInIcon className='mr-2' size={20} />
             Sign In
           </Button>

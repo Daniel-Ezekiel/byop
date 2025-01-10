@@ -49,6 +49,7 @@ interface WorkExperienceCardProps {
   endDate: string;
   location: string;
   responsibilities: string[];
+  showButtons?: boolean;
   className?: string;
   // onEdit: () => void;
   // onDelete: () => void;

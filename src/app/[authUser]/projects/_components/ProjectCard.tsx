@@ -5,22 +5,30 @@ function ProjectCard({
   projectName,
   projectSummary,
   projectTools,
+  showButtons = true,
 }: {
   projectName: string;
   projectSummary: string;
   projectTools: string;
+  showButtons?: boolean;
 }) {
   return (
     <div className='grid grid-cols-2 gap-4 bg-slate-900 rounded-md border p-6'>
-      <div className='justify-self-start flex gap-2'>
-        <Button variant='ghost' className='p-2'>
-          <PencilIcon />
-        </Button>
-        <Button variant='ghost' className='p-2'>
-          <TrashIcon />
-        </Button>
-      </div>
-      <div className='justify-self-end flex gap-2'>
+      {showButtons && (
+        <div className='justify-self-start flex gap-2'>
+          <Button variant='ghost' className='p-2'>
+            <PencilIcon />
+          </Button>
+          <Button variant='ghost' className='p-2'>
+            <TrashIcon />
+          </Button>
+        </div>
+      )}
+      <div
+        className={`${
+          !showButtons && "col-span-full"
+        } justify-self-end flex gap-2`}
+      >
         <Button variant='ghost' className='p-2'>
           <ExternalLinkIcon />
         </Button>

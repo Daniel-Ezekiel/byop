@@ -81,21 +81,25 @@ function Dashboard() {
             projectName='Project One'
             projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
             projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+            showButtons={false}
           />
           <ProjectCard
             projectName='Project One'
             projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
             projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+            showButtons={false}
           />
           <ProjectCard
             projectName='Project One'
             projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
             projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+            showButtons={false}
           />
           <ProjectCard
             projectName='Project One'
             projectSummary='Discover movies effortlessly with LMDB, a sleek cinematic database inspired by TMDB. This user-friendly app offers quick access to film details, including cast, crew, and synopses.'
             projectTools='React.js, Typescript, TailwindCSS, Tanstack Query, TMDb API'
+            showButtons={false}
           />
         </DetailsCard>
 
@@ -122,6 +126,7 @@ function Dashboard() {
               `Integrated an audio-streaming API, leveraging caching techniques
                 to reduce latency, increasing user session duration by 38%.`,
             ]}
+            showButtons={false}
           />
           <WorkExperienceCard
             position='Frontend Developer'
@@ -139,6 +144,7 @@ function Dashboard() {
               `Integrated an audio-streaming API, leveraging caching techniques
               to reduce latency, increasing user session duration by 38%.`,
             ]}
+            showButtons={false}
           />
           <WorkExperienceCard
             position='Frontend Developer'
@@ -156,6 +162,7 @@ function Dashboard() {
               `Integrated an audio-streaming API, leveraging caching techniques
             to reduce latency, increasing user session duration by 38%.`,
             ]}
+            showButtons={false}
           />
           <WorkExperienceCard
             position='Frontend Developer'
@@ -173,6 +180,7 @@ function Dashboard() {
               `Integrated an audio-streaming API, leveraging caching techniques
           to reduce latency, increasing user session duration by 38%.`,
             ]}
+            showButtons={false}
           />
         </DetailsCard>
 

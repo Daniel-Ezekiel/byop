@@ -1,5 +1,5 @@
 import NoDetails from "@/app/_components/dashboard/NoDetails";
-import { PlusIcon } from "lucide-react";
+import { EditIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 
 function DetailsCard({
@@ -27,9 +27,10 @@ function DetailsCard({
 
       <Link
         href={`./${url}`}
-        className='justify-self-end flex items-center bg-gradient-linear-200 px-2 py-1 rounded-md'
+        className='justify-self-end flex items-center gap-2 bg-gradient-linear-300 p-2 px-4 rounded-md'
       >
-        Add <PlusIcon size={22} />
+        {data ? `Edit ` : "Add "} {title.split(" ")[0]}
+        {data ? <EditIcon size={22} /> : <PlusIcon size={22} />}
       </Link>
 
       <div
