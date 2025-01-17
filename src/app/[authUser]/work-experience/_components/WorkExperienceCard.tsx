@@ -18,14 +18,12 @@ const WorkExperienceCard: React.FC<WorkExperienceCardProps> = ({
     >
       {showButtons && (
         <div className='col-span-full justify-self-end flex gap-2 mb-4'>
-          (
           <Button variant='ghost' className='p-2'>
             <EditIcon />
           </Button>
           <Button variant='ghost' className='p-2'>
             <TrashIcon />
           </Button>
-          )
         </div>
       )}
       <h2 className='font-[family-name:var(--font-general-sans-semibold)] bg-gradient-linear-200 bg-clip-text text-transparent'>
